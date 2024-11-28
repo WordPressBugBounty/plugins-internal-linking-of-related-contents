@@ -11,7 +11,7 @@ if (!function_exists('ilrc_function')) {
 			'url' => '',
 			'target' => '',
 			'rel' => '',
-			'cta' => esc_html__( 'Read more', 'internal-linking-related-contents')
+			'cta' => esc_html__( 'Read more', 'internal-linking-of-related-contents')
 		), $atts));
 
 			$output = '';

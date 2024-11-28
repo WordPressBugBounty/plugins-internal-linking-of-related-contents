@@ -38,8 +38,8 @@ if( !class_exists( 'ilrc_panel' ) ) {
 			if ( !isset( $admin_page_hooks['tip_plugins_panel']) ) :
 
 				add_menu_page(
-					esc_html__('TIP Plugins', 'internal-linking-related-contents'),
-					esc_html__('TIP Plugins', 'internal-linking-related-contents'),
+					esc_html__('TIP Plugins', 'internal-linking-of-related-contents'),
+					esc_html__('TIP Plugins', 'internal-linking-of-related-contents'),
 					'manage_options',
 					'tip_plugins_panel',
 					NULL,
@@ -51,8 +51,8 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 			add_submenu_page(
 				'tip_plugins_panel',
-				esc_html__('Internal Linking of Related Contents', 'internal-linking-related-contents'),
-				esc_html__('Internal Linking of Related Contents', 'internal-linking-related-contents'),
+				esc_html__('Internal Linking of Related Contents', 'internal-linking-of-related-contents'),
+				esc_html__('Internal Linking of Related Contents', 'internal-linking-of-related-contents'),
 				'manage_options',
 				'ilrc_panel',
 				array(&$this, 'ilrc_panel')
@@ -474,7 +474,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 							}
 
-							$ilrc_message = esc_html__('Options saved successfully.', 'internal-linking-related-contents' );
+							$ilrc_message = esc_html__('Options saved successfully.', 'internal-linking-of-related-contents' );
 
 						}
 
@@ -536,12 +536,12 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 									echo $ilrcForm->elementStart('div', FALSE, 'left plugin_description' );
 
-										echo $ilrcForm->element('h2', FALSE, 'maintitle', esc_html__( 'Internal Linking of Related Contents','internal-linking-related-contents'));
-										echo $ilrcForm->element('span', FALSE, FALSE, esc_html__( 'Version: ','internal-linking-related-contents') . ILRC_VERSION);
-										echo $ilrcForm->link('https://www.themeinprogress.com', FALSE, FALSE, '_blank', FALSE, esc_html__( 'by ThemeinProgress','internal-linking-related-contents') );
-										echo $ilrcForm->link('https://internal-linking-related-contents-pro.demo.themeinprogress.com/free-settings/', FALSE, FALSE, '_blank', FALSE, esc_html__( ' - Documentation','internal-linking-related-contents') );
-										echo $ilrcForm->link('https://wordpress.org/support/plugin/internal-linking-of-related-contents/', FALSE, FALSE, '_blank', FALSE, esc_html__( ' - Support','internal-linking-related-contents') );
-										echo $ilrcForm->link('https://wordpress.org/support/plugin/internal-linking-of-related-contents/reviews/', FALSE, FALSE, '_blank', FALSE, esc_html__( ' - Rate this plugin on WordPress.org','internal-linking-related-contents') );
+										echo $ilrcForm->element('h2', FALSE, 'maintitle', esc_html__( 'Internal Linking of Related Contents','internal-linking-of-related-contents'));
+										echo $ilrcForm->element('span', FALSE, FALSE, esc_html__( 'Version: ','internal-linking-of-related-contents') . ILRC_VERSION);
+										echo $ilrcForm->link('https://www.themeinprogress.com', FALSE, FALSE, '_blank', FALSE, esc_html__( 'by ThemeinProgress','internal-linking-of-related-contents') );
+										echo $ilrcForm->link('https://demo.themeinprogress.eu/internal-linking-related-contents-pro/free-settings/', FALSE, FALSE, '_blank', FALSE, esc_html__( ' - Documentation','internal-linking-of-related-contents') );
+										echo $ilrcForm->link('https://wordpress.org/support/plugin/internal-linking-of-related-contents/', FALSE, FALSE, '_blank', FALSE, esc_html__( ' - Support','internal-linking-of-related-contents') );
+										echo $ilrcForm->link('https://wordpress.org/support/plugin/internal-linking-of-related-contents/reviews/', FALSE, FALSE, '_blank', FALSE, esc_html__( ' - Rate this plugin on WordPress.org','internal-linking-of-related-contents') );
 
 									echo $ilrcForm->elementEnd('div');
 
@@ -664,7 +664,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 									echo $ilrcForm->elementStart('div', FALSE, $plugin_slug . 'box WIP_plugin_save_box');
 
-										echo $ilrcForm->input('ilrc_save_settings_action', FALSE, 'button', 'submit', esc_html__('Save content', 'custom-thank-you-page' ));
+										echo $ilrcForm->input('ilrc_save_settings_action', FALSE, 'button', 'submit', esc_html__('Save content', 'internal-linking-of-related-contents' ));
 
 									echo $ilrcForm->elementEnd('div');
 
@@ -682,8 +682,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 										echo $ilrcForm->elementStart('div', FALSE, 'input-right' );
 
-											echo $ilrcForm->color($value['id'], $value['id'], $plugin_slug . 'color', 'text',
-sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
+											echo $ilrcForm->color($value['id'], $value['id'], $plugin_slug . 'color', 'text', sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 											echo $ilrcForm->element('p', FALSE, FALSE, $value['desc']);
 
 										echo $ilrcForm->elementEnd('div');
@@ -700,7 +699,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 										echo $ilrcForm->elementStart('div', FALSE, 'input-left' );
 
-											echo $ilrcForm->label(FALSE, esc_html__('Current plugin settings','internal-linking-related-contents'));
+											echo $ilrcForm->label(FALSE, esc_html__('Current plugin settings','internal-linking-of-related-contents'));
 
 										echo $ilrcForm->elementEnd('div');
 
@@ -709,7 +708,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 											echo $ilrcForm->textarea(FALSE, FALSE, 'widefat code', serialize($this->get_options()), TRUE);
 
 											$exportURL = esc_url('?page=ilrc_panel&tab=Import_Export&action=ilrc_backup_download');
-											echo $ilrcForm->link($exportURL, FALSE, 'button button-secondary', '_self', FALSE, esc_html__( 'Download current plugin settings','internal-linking-related-contents') );
+											echo $ilrcForm->link($exportURL, FALSE, 'button button-secondary', '_self', FALSE, esc_html__( 'Download current plugin settings','internal-linking-of-related-contents') );
 
 										echo $ilrcForm->elementEnd('div');
 
@@ -721,16 +720,16 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 										echo $ilrcForm->elementStart('div', FALSE, 'input-left' );
 
-											echo $ilrcForm->label(FALSE, esc_html__('Reset plugin settings','internal-linking-related-contents'));
+											echo $ilrcForm->label(FALSE, esc_html__('Reset plugin settings','internal-linking-of-related-contents'));
 
 										echo $ilrcForm->elementEnd('div');
 
 										echo $ilrcForm->elementStart('div', FALSE, 'input-right' );
 
 											$resetURL = esc_url('?page=ilrc_panel&tab=Import_Export&action=ilrc_backup_reset');
-											echo $ilrcForm->link($resetURL, FALSE, 'button-secondary ilrc_restore_settings', '_self', FALSE, esc_html__( 'Reset plugin settings','internal-linking-related-contents') );
+											echo $ilrcForm->link($resetURL, FALSE, 'button-secondary ilrc_restore_settings', '_self', FALSE, esc_html__( 'Reset plugin settings','internal-linking-of-related-contents') );
 
-											echo $ilrcForm->element('p', FALSE, FALSE, esc_html__( 'If you click the button above, the plugin options return to its default values','internal-linking-related-contents'));
+											echo $ilrcForm->element('p', FALSE, FALSE, esc_html__( 'If you click the button above, the plugin options return to its default values','internal-linking-of-related-contents'));
 
 										echo $ilrcForm->elementEnd('div');
 
@@ -742,14 +741,14 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 										echo $ilrcForm->elementStart('div', FALSE, 'input-left' );
 
-											echo $ilrcForm->label(FALSE, esc_html__('Import plugin settings','internal-linking-related-contents'));
+											echo $ilrcForm->label(FALSE, esc_html__('Import plugin settings','internal-linking-of-related-contents'));
 
 										echo $ilrcForm->elementEnd('div');
 
 										echo $ilrcForm->elementStart('div', FALSE, 'input-right' );
 
 											echo $ilrcForm->input('ilrc_upload_file', FALSE, FALSE, 'file', FALSE);
-											echo $ilrcForm->input('ilrc_upload_backup', 'ilrc_upload_backup', 'button-primary', 'submit', esc_html__( 'Import plugin settings','internal-linking-related-contents'));
+											echo $ilrcForm->input('ilrc_upload_backup', 'ilrc_upload_backup', 'button-primary', 'submit', esc_html__( 'Import plugin settings','internal-linking-of-related-contents'));
 											function_exists('wp_nonce_field') ? wp_nonce_field('ilrc_restore_options', 'ilrc_restore_options') : '' ;
 
 										echo $ilrcForm->elementEnd('div');
@@ -773,11 +772,11 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 											echo $ilrcForm->tableElement('th', FALSE, 'large');
 
 											echo $ilrcForm->tableElementStart('th', FALSE, 'indicator');
-												echo esc_html__('Free', 'internal-linking-related-contents');
+												echo esc_html__('Free', 'internal-linking-of-related-contents');
 											echo $ilrcForm->tableElementEnd('th');
 
 											echo $ilrcForm->tableElementStart('th', FALSE, 'indicator');
-												echo esc_html__('Premium', 'internal-linking-related-contents');
+												echo esc_html__('Premium', 'internal-linking-of-related-contents');
 											echo $ilrcForm->tableElementEnd('th');
 
 										echo $ilrcForm->tableElementEnd('tr');
@@ -790,7 +789,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Custom colors', 'internal-linking-related-contents');
+														echo esc_html__('Custom colors', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -820,7 +819,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Option to edit the cta text', 'internal-linking-related-contents');
+														echo esc_html__('Option to edit the cta text', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -850,7 +849,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Option to edit the top and bottom margin', 'internal-linking-related-contents');
+														echo esc_html__('Option to edit the top and bottom margin', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -880,7 +879,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Shortcode', 'internal-linking-related-contents');
+														echo esc_html__('Shortcode', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -910,7 +909,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Related content based of post category', 'internal-linking-related-contents');
+														echo esc_html__('Related content based of post category', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -940,7 +939,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Related content based of post tag', 'internal-linking-related-contents');
+														echo esc_html__('Related content based of post tag', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -970,7 +969,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Option to edit the_content hook priority', 'internal-linking-related-contents');
+														echo esc_html__('Option to edit the_content hook priority', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1000,7 +999,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Templates', 'internal-linking-related-contents');
+														echo esc_html__('Templates', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1010,13 +1009,13 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('3', 'internal-linking-related-contents');
+												echo esc_html__('3', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('12', 'internal-linking-related-contents');
+												echo esc_html__('12', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
@@ -1030,7 +1029,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Related contents inside each post', 'internal-linking-related-contents');
+														echo esc_html__('Related contents inside each post', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1040,13 +1039,13 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('1 to 3', 'internal-linking-related-contents');
+												echo esc_html__('1 to 3', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('1 to 20', 'internal-linking-related-contents');
+												echo esc_html__('1 to 20', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
@@ -1060,7 +1059,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Interval between each related content', 'internal-linking-related-contents');
+														echo esc_html__('Interval between each related content', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1070,13 +1069,13 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('1 to 6 paragraphs', 'internal-linking-related-contents');
+												echo esc_html__('1 to 6 paragraphs', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('1 to 20 paragraphs', 'internal-linking-related-contents');
+												echo esc_html__('1 to 20 paragraphs', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
@@ -1090,7 +1089,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Inline related posts', 'internal-linking-related-contents');
+														echo esc_html__('Inline related posts', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1120,7 +1119,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Grouped related posts', 'internal-linking-related-contents');
+														echo esc_html__('Grouped related posts', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1130,7 +1129,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('Now you can group all related posts in one place within your content. This feature simplifies navigation and provides your readers with quick access to all related articles, enhancing the user experience of your website.', 'internal-linking-related-contents');
+															echo esc_html__('Now you can group all related posts in one place within your content. This feature simplifies navigation and provides your readers with quick access to all related articles, enhancing the user experience of your website.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1162,7 +1161,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Related content based of category and post tags', 'internal-linking-related-contents');
+														echo esc_html__('Related content based of category and post tags', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1172,7 +1171,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('Besides the options available on the free version, you can load the related contents based of categories and post tags.', 'internal-linking-related-contents');
+															echo esc_html__('Besides the options available on the free version, you can load the related contents based of categories and post tags.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1204,7 +1203,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Custom keywords', 'internal-linking-related-contents');
+														echo esc_html__('Custom keywords', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1214,7 +1213,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can use custom keywords as Engine Search but you will need to set the keywords for each post to generate the list of related contents.', 'internal-linking-related-contents');
+															echo esc_html__('You can use custom keywords as Engine Search but you will need to set the keywords for each post to generate the list of related contents.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1246,7 +1245,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Option to exclude specific categories', 'internal-linking-related-contents');
+														echo esc_html__('Option to exclude specific categories', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1256,7 +1255,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can select one or more categories to exclude from the related contents.', 'internal-linking-related-contents');
+															echo esc_html__('You can select one or more categories to exclude from the related contents.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1288,7 +1287,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Option to exclude specific tags', 'internal-linking-related-contents');
+														echo esc_html__('Option to exclude specific tags', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1298,7 +1297,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can select one or more post tags to exclude from the related contents.', 'internal-linking-related-contents');
+															echo esc_html__('You can select one or more post tags to exclude from the related contents.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1330,7 +1329,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Option to exclude specific posts', 'internal-linking-related-contents');
+														echo esc_html__('Option to exclude specific posts', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1340,7 +1339,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can select one or more posts to exclude from the related contents.', 'internal-linking-related-contents');
+															echo esc_html__('You can select one or more posts to exclude from the related contents.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1372,7 +1371,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Device selection', 'internal-linking-related-contents');
+														echo esc_html__('Device selection', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1382,7 +1381,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can select the device where you want to display the related contents.', 'internal-linking-related-contents');
+															echo esc_html__('You can select the device where you want to display the related contents.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1414,7 +1413,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Option to edit the font size', 'internal-linking-related-contents');
+														echo esc_html__('Option to edit the font size', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1424,7 +1423,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can set a different font size, based of the user device (mobile,tablet and desktop).', 'internal-linking-related-contents');
+															echo esc_html__('You can set a different font size, based of the user device (mobile,tablet and desktop).', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1456,7 +1455,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Featured image', 'internal-linking-related-contents');
+														echo esc_html__('Featured image', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1466,7 +1465,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can display the featured image of related content, choosing one of premium available template.', 'internal-linking-related-contents');
+															echo esc_html__('You can display the featured image of related content, choosing one of premium available template.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1498,7 +1497,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Order by option', 'internal-linking-related-contents');
+														echo esc_html__('Order by option', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1508,7 +1507,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can select how to order the related contents.', 'internal-linking-related-contents');
+															echo esc_html__('You can select how to order the related contents.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1540,7 +1539,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Sort order option', 'internal-linking-related-contents');
+														echo esc_html__('Sort order option', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1550,7 +1549,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can select the ordering of related contents.', 'internal-linking-related-contents');
+															echo esc_html__('You can select the ordering of related contents.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1582,7 +1581,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Shortcode generator', 'internal-linking-related-contents');
+														echo esc_html__('Shortcode generator', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1592,7 +1591,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('For only WordPress 3.9.0 and higher versions is available a dynamic shortcode generator, to add a specific related post inside the WordPress content.', 'internal-linking-related-contents');
+															echo esc_html__('For only WordPress 3.9.0 and higher versions is available a dynamic shortcode generator, to add a specific related post inside the WordPress content.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1626,7 +1625,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Advanced shortcode', 'internal-linking-related-contents');
+														echo esc_html__('Advanced shortcode', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1636,7 +1635,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('Use the new shortcode "[ilrc_advanced]" to display a list of related contents or a specific related post, based on available related posts.', 'internal-linking-related-contents');
+															echo esc_html__('Use the new shortcode "[ilrc_advanced]" to display a list of related contents or a specific related post, based on available related posts.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1671,7 +1670,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Gutenberg block', 'internal-linking-related-contents');
+														echo esc_html__('Gutenberg block', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1681,7 +1680,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('Starting from the version 1.0.9, you can use the Gutenberg block to add a specific related post inside the WordPress content.', 'internal-linking-related-contents');
+															echo esc_html__('Starting from the version 1.0.9, you can use the Gutenberg block to add a specific related post inside the WordPress content.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1713,7 +1712,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('AMP support', 'internal-linking-related-contents');
+														echo esc_html__('AMP support', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1723,7 +1722,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('Display rightly the related posts in AMP pages.', 'internal-linking-related-contents');
+															echo esc_html__('Display rightly the related posts in AMP pages.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1755,7 +1754,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Custom post types support', 'internal-linking-related-contents');
+														echo esc_html__('Custom post types support', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1765,7 +1764,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can enable the related contents for specific custom post types.', 'internal-linking-related-contents');
+															echo esc_html__('You can enable the related contents for specific custom post types.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1797,7 +1796,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Automatic data import', 'internal-linking-related-contents');
+														echo esc_html__('Automatic data import', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1807,7 +1806,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('After the activation of Internal Linking of Related Contents Pro, all settings will be imported automatically from the free version.', 'internal-linking-related-contents');
+															echo esc_html__('After the activation of Internal Linking of Related Contents Pro, all settings will be imported automatically from the free version.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1838,7 +1837,7 @@ sanitize_hex_color(ilrc_setting($value['id'], $value['std'])), $value['std']);
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo $ilrcForm->link(esc_url(ILRC_SALE_PAGE . 'ilrc-freepro-table'), FALSE, 'button button-primary', '_blank', FALSE, esc_html__( 'Upgrade to Premium','internal-linking-related-contents') );
+												echo $ilrcForm->link(esc_url(ILRC_SALE_PAGE . 'ilrc-freepro-table'), FALSE, 'button button-primary', '_blank', FALSE, esc_html__( 'Upgrade to Premium','internal-linking-of-related-contents') );
 
 											echo $ilrcForm->tableElementEnd('td');
 

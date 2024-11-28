@@ -4,8 +4,8 @@
 Plugin Name: Internal Linking of Related Contents
 Plugin URI: https://www.themeinprogress.com/internal-linking-related-contents-pro/
 Description: Internal Linking of Related Contents allows you to automatically insert inline related posts within your WordPress articles.
-Version: 1.1.5
-Text Domain: internal-linking-related-contents
+Version: 1.1.6
+Text Domain: internal-linking-of-related-contents
 Author: ThemeinProgress
 Author URI: https://www.themeinprogress.com
 License: GPL3
@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 define( 'ILRC_NAME', 'Internal Linking Related Contents' );
-define( 'ILRC_VERSION', '1.1.5' );
+define( 'ILRC_VERSION', '1.1.6' );
 define( 'ILRC_PLUGIN_FOLDER', plugins_url(false, __FILE__ ) );
 define( 'ILRC_ITEM_SLUG', 'ilrc');
 define( 'ILRC_UPGRADE_LINK', 'https://www.themeinprogress.com/internal-linking-of-related-contents-pro/' );
@@ -69,8 +69,8 @@ if( !class_exists( 'ilrc_init' ) ) {
 
 		public function plugin_action_links( $links ) {
 
-			$links[] = '<a href="'. esc_url( get_admin_url(null, 'admin.php?page=ilrc_panel') ) .'">' . esc_html__('Settings','internal-linking-related-contents') . '</a>';
-			$links[] = '<a target="_blank" href="'. esc_url(ILRC_SALE_PAGE . 'action_link') .'">' . esc_html__('Upgrade to PRO','internal-linking-related-contents') . '</a>';
+			$links[] = '<a href="'. esc_url( get_admin_url(null, 'admin.php?page=ilrc_panel') ) .'">' . esc_html__('Settings','internal-linking-of-related-contents') . '</a>';
+			$links[] = '<a target="_blank" href="'. esc_url(ILRC_SALE_PAGE . 'action_link') .'">' . esc_html__('Upgrade to PRO','internal-linking-of-related-contents') . '</a>';
 			return $links;
 
 		}
@@ -97,7 +97,7 @@ if( !class_exists( 'ilrc_init' ) ) {
 
 		public function plugin_setup() {
 
-			load_plugin_textdomain( 'internal-linking-related-contents', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
+			load_plugin_textdomain( 'internal-linking-of-related-contents', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
 
 			require_once dirname(__FILE__) . '/core/functions/functions.php';
 			require_once dirname(__FILE__) . '/core/functions/style.php';
@@ -109,8 +109,6 @@ if( !class_exists( 'ilrc_init' ) ) {
 
 			if ( is_admin() == 1 )
 				require_once dirname(__FILE__) . '/core/admin/panel.php';
-
-
 
 		}
 

@@ -257,7 +257,7 @@ if( !class_exists( 'ilrc_content' ) ) {
 		public function printRelatedContents($postID) {
 
 			$output  = '[ilrc';
-			$output .= ' cta="' . esc_html__(ilrc_setting('ilrc_cta', esc_html__( 'Read more', 'internal-linking-related-contents'))) . '" ';
+			$output .= ' cta="' . esc_html__(ilrc_setting('ilrc_cta', esc_html__( 'Read more', 'internal-linking-of-related-contents'))) . '" ';
 			$output .= ' template="' . esc_html__(ilrc_setting('ilrc_template', 'template-2')) . '" ';
 			$output .= ' target="' . esc_html__(ilrc_setting('ilrc_targetattribute', '')) . '" ';
 			$output .= ' rel="' . esc_html__(ilrc_setting('ilrc_relattribute', '')) . '" ';
