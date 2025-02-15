@@ -4,14 +4,14 @@
 Plugin Name: Internal Linking of Related Contents
 Plugin URI: https://www.themeinprogress.com/internal-linking-related-contents-pro/
 Description: Internal Linking of Related Contents allows you to automatically insert inline related posts within your WordPress articles.
-Version: 1.1.6
+Version: 1.1.7
 Text Domain: internal-linking-of-related-contents
 Author: ThemeinProgress
 Author URI: https://www.themeinprogress.com
 License: GPL3
 Domain Path: /languages/
 
-Copyright 2024  ThemeinProgress  (email : support@wpinprogress.com)
+Copyright 2025  ThemeinProgress  (email : support@wpinprogress.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 define( 'ILRC_NAME', 'Internal Linking Related Contents' );
-define( 'ILRC_VERSION', '1.1.6' );
+define( 'ILRC_VERSION', '1.1.7' );
 define( 'ILRC_PLUGIN_FOLDER', plugins_url(false, __FILE__ ) );
 define( 'ILRC_ITEM_SLUG', 'ilrc');
 define( 'ILRC_UPGRADE_LINK', 'https://www.themeinprogress.com/internal-linking-of-related-contents-pro/' );
@@ -47,6 +47,7 @@ if( !class_exists( 'ilrc_init' ) ) {
 
 			add_action('admin_init', array(&$this, 'disable_plugins') );
 			add_action('plugins_loaded', array(&$this, 'plugin_setup') );
+			add_action('wp_loaded', array(&$this, 'plugin_panel') );
 			add_filter('plugin_action_links_' . plugin_basename(__FILE__), array( $this, 'plugin_action_links' ), 10, 2 );
 			add_action('wp_enqueue_scripts', array(&$this,'site_scripts') );
 
@@ -97,7 +98,6 @@ if( !class_exists( 'ilrc_init' ) ) {
 
 		public function plugin_setup() {
 
-			load_plugin_textdomain( 'internal-linking-of-related-contents', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
 
 			require_once dirname(__FILE__) . '/core/functions/functions.php';
 			require_once dirname(__FILE__) . '/core/functions/style.php';
@@ -106,6 +106,16 @@ if( !class_exists( 'ilrc_init' ) ) {
 			require_once dirname(__FILE__) . '/core/includes/class-form.php';
 			require_once dirname(__FILE__) . '/core/includes/class-panel.php';
 			require_once dirname(__FILE__) . '/core/includes/class-notice.php';
+
+		}
+
+		/**
+		* Plugin panel
+		*/
+
+		public function plugin_panel() {
+
+			load_plugin_textdomain( 'internal-linking-of-related-contents', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
 
 			if ( is_admin() == 1 )
 				require_once dirname(__FILE__) . '/core/admin/panel.php';

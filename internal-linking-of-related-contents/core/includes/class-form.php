@@ -14,9 +14,9 @@ if( !class_exists( 'ilrc_form' ) ) {
 		public function elementStart($attribute, $id, $class ) {
 
 			$html = '<';
-			$html .= $attribute !== FALSE ? $attribute : '' ;
-			$html .= $id !== FALSE ? ' id="' . $id . '" ' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '" ' : '' ;
+			$html .= $attribute !== FALSE ? esc_attr($attribute) : '' ;
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '" ' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '" ' : '' ;
 			$html .= '>';
 
 			return $html;
@@ -30,7 +30,7 @@ if( !class_exists( 'ilrc_form' ) ) {
 		public function elementEnd($attribute) {
 
 			$html = '</';
-			$html .= $attribute !== FALSE ? $attribute : '' ;
+			$html .= $attribute !== FALSE ? esc_attr($attribute) : '' ;
 			$html .= '>';
 
 			return $html;
@@ -44,13 +44,13 @@ if( !class_exists( 'ilrc_form' ) ) {
 		public function element($attribute, $id, $class, $content) {
 
 			$html = '<';
-			$html .= $attribute !== FALSE ? $attribute : '' ;
-			$html .= $id !== FALSE ? ' id="' . $id . '" ' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '" ' : '' ;
+			$html .= $attribute !== FALSE ? esc_attr($attribute) : '' ;
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '" ' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '" ' : '' ;
 			$html .= '>';
-			$html .= $content !== FALSE ? $content : '' ;
+			$html .= $content !== FALSE ? esc_html($content) : '' ;
 			$html .= '</';
-			$html .= $attribute !== FALSE ? $attribute : '' ;
+			$html .= $attribute !== FALSE ? esc_attr($attribute) : '' ;
 			$html .= '>';
 
 			return $html;
@@ -64,9 +64,9 @@ if( !class_exists( 'ilrc_form' ) ) {
 		public function img($src, $id = FALSE, $class = FALSE) {
 
 			$html = '<img ';
-			$html .= $src !== FALSE ? ' src="' . $src . '" ' : '' ;
-			$html .= $id !== FALSE ? ' id="' . $id . '" ' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '" ' : '' ;
+			$html .= $src !== FALSE ? ' src="' . esc_attr($src) . '" ' : '' ;
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '" ' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '" ' : '' ;
 			$html .= '>';
 
 			return $html;
@@ -81,12 +81,12 @@ if( !class_exists( 'ilrc_form' ) ) {
 
 			$html = '<a ';
 			$html .= $url !== FALSE ? ' href="' . esc_url($url) . '" ' : '' ;
-			$html .= $id !== FALSE ? ' id="' . $id . '" ' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '" ' : '' ;
-			$html .= $target !== FALSE ? ' target="' . $target . '" ' : '' ;
-			$html .= $rel !== FALSE ? ' rel="' . $rel . '" ' : '' ;
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '" ' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '" ' : '' ;
+			$html .= $target !== FALSE ? ' target="' . esc_attr($target) . '" ' : '' ;
+			$html .= $rel !== FALSE ? ' rel="' . esc_attr($rel) . '" ' : '' ;
 			$html .= '>';
-			$html .= $content !== FALSE ? $content : '' ;
+			$html .= $content !== FALSE ? esc_html($content) : '' ;
 			$html .= '</a>';
 
 			return $html;
@@ -99,29 +99,29 @@ if( !class_exists( 'ilrc_form' ) ) {
 
 		public function htmlList( $type, $id, $class, $values, $current ) {
 
-			$html  = '<' . $type;
-			$html .= $id !== FALSE ? ' id="' . $id . '"' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '"' : '' ;
+			$html  = '<' . esc_attr($type);
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '"' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '"' : '' ;
 			$html .= '>';
 
 			foreach ($values as $k => $v ) {
-
+			
 				$html .= '<li';
 				$html .= (str_replace(' ', '', $k) === $current) ? ' class="ui-state-active"' : '' ;
 				$html .= ' value="' . $k . '"';
 				$html .= '>';
-
+				
 				if (0 === strpos($k, 'http')) {
 					$html .= $this->link($k, FALSE, FALSE, '_BLANK', FALSE, $v);
 				} else {
 					$html .= $this->link(esc_url('admin.php?page=ilrc_panel&tab=' . str_replace(' ', '', $k)), FALSE, FALSE, '_SELF', FALSE, $v);
 				}
-
+				
 				$html .= '</li>';
 			}
-
+			
 			$html .= '<li class="clear"></li>';
-			$html .= '</' . $type . '>';
+			$html .= '</' . esc_attr($type) . '>';
 
 			return $html;
 
@@ -134,8 +134,8 @@ if( !class_exists( 'ilrc_form' ) ) {
 		public function formStart($method, $action ) {
 
 			$html = '<form enctype="multipart/form-data"';
-			$html .= $method !== FALSE ? ' method="' . $method . '" ' : '' ;
-			$html .= $action !== FALSE ? ' action="' . $action . '" ' : '' ;
+			$html .= $method !== FALSE ? ' method="' . esc_attr($method) . '" ' : '' ;
+			$html .= $action !== FALSE ? ' action="' . esc_attr($action) . '" ' : '' ;
 			$html .= '>';
 
 			return $html;
@@ -159,9 +159,10 @@ if( !class_exists( 'ilrc_form' ) ) {
 		public function label($id, $text) {
 
 			$html  = '<label';
-			$html .= $id !== FALSE ? ' for="' . $id . '"' : '' ;
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '_label"' : '' ;
+			$html .= $id !== FALSE ? ' for="' . esc_attr($id) . '"' : '' ;
 			$html .= '>';
-			$html .= $text !== FALSE ? $text : '' ;
+			$html .= $text !== FALSE ? esc_html($text) : '' ;
 			$html .= '</label>';
 
 			return $html;
@@ -175,12 +176,12 @@ if( !class_exists( 'ilrc_form' ) ) {
 		public function input($name, $id, $class, $type, $value, $limit = FALSE ) {
 
 			$html  = '<input ';
-			$html .= $name !== FALSE ? ' name="' . $name . '"' : '' ;
-			$html .= $id !== FALSE ? ' id="' . $id . '"' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '"' : '' ;
-			$html .= $type !== FALSE ? ' type="' . $type . '"' : '' ;
-			$html .= $limit !== FALSE ? ' min="' . $limit . '"' : '' ;
-			$html .= $value !== FALSE ? ' value="' . $value . '"' : '' ;
+			$html .= $name !== FALSE ? ' name="' . esc_attr($name) . '"' : '' ;
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '"' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '"' : '' ;
+			$html .= $type !== FALSE ? ' type="' . esc_attr($type) . '"' : '' ;
+			$html .= $limit !== FALSE ? ' min="' . esc_attr($limit) . '"' : '' ;
+			$html .= $value !== FALSE ? ' value="' . esc_attr($value) . '"' : '' ;
 			$html .= ' >';
 
 			return $html;
@@ -193,7 +194,7 @@ if( !class_exists( 'ilrc_form' ) ) {
 
 		public function color($name, $id, $class, $type, $value, $std ) {
 
-			$html = str_replace ('<input ', '<input data-default-color="' . $std .'" ' , $this->input($name, $id, $class, $type, $value));
+			$html = str_replace ('<input ', '<input data-default-color="' . esc_attr($std) .'" ' , $this->input($name, $id, $class, $type, $value));  
 			return $html;
 
 		}
@@ -205,9 +206,9 @@ if( !class_exists( 'ilrc_form' ) ) {
 		public function textarea($name, $id, $class, $value, $disabled) {
 
 			$html  = '<textarea ';
-			$html .= $name !== FALSE ? ' name="' . $name . '"' : '' ;
-			$html .= $id !== FALSE ? ' id="' . $id . '"' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '"' : '' ;
+			$html .= $name !== FALSE ? ' name="' . esc_attr($name) . '"' : '' ;
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '"' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '"' : '' ;
 			$html .= $disabled === TRUE ? ' disabled' : '' ;
 			$html .= '>';
 			$html .= $value !== FALSE ? stripslashes($value) : '' ;
@@ -224,19 +225,19 @@ if( !class_exists( 'ilrc_form' ) ) {
 		public function select($name, $id, $class, $values, $current, $dataType ) {
 
 			$html  = '<select ';
-			$html .= $name !== FALSE ? ' name="' . $name . '"' : '' ;
-			$html .= $id !== FALSE ? ' id="' . $id . '"' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '"' : '' ;
-			$html .= $dataType !== FALSE ? $dataType : '' ;
+			$html .= $name !== FALSE ? ' name="' . esc_attr($name) . '"' : '' ;
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '"' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '"' : '' ;
+			$html .= $dataType !== FALSE ? esc_attr($dataType) : '' ;
 			$html .= '>';
 
 			foreach ($values as $k => $v ) {
 
 				$html .= '<option';
 				$html .= strval($k) === strval($current) ? ' selected="selected"' : '' ;
-				$html .= ' value="' . $k . '"';
+				$html .= ' value="' . esc_attr($k) . '"';
 				$html .= '>';
-				$html .= $v;
+				$html .= esc_html($v);
 				$html .= '</option>';
 			}
 
@@ -269,7 +270,15 @@ if( !class_exists( 'ilrc_form' ) ) {
 
 				}
 
-				$html .= '<p><input name="' . $name . '[]" type="checkbox" value="' . $k . '" ' . $check . '/>' . $v . '</p>';
+				$html  = '<p>';
+				$html .= '<input';
+				$html .= $name !== FALSE ? ' name="' . esc_attr($name) . '[]"' : '' ;
+				$html .= 'type="checkbox"' ;
+				$html .= 'value="' . esc_attr($k) . '"' ;
+				$html .= $check;
+				$html .= '/>';
+				$html .= esc_html($v);
+				$html .= '</p>';
 
 			}
 
@@ -284,10 +293,10 @@ if( !class_exists( 'ilrc_form' ) ) {
 		public function tableStart($id, $class, $cellspacing, $cellpadding) {
 
 			$html  = '<table ';
-			$html .= $id !== FALSE ? ' id="' . $id . '"' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '"' : '' ;
-			$html .= $cellspacing !== FALSE ? ' cellspacing="' . $cellspacing . '"' : '' ;
-			$html .= $cellpadding !== FALSE ? ' cellpadding="' . $cellpadding . '"' : '' ;
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '"' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '"' : '' ;
+			$html .= $cellspacing !== FALSE ? ' cellspacing="' . esc_attr($cellspacing) . '"' : '' ;
+			$html .= $cellpadding !== FALSE ? ' cellpadding="' . esc_attr($cellpadding) . '"' : '' ;
 			$html .= '>';
 
 			return $html;
@@ -310,12 +319,12 @@ if( !class_exists( 'ilrc_form' ) ) {
 
 		public function tableElement($name, $id, $class) {
 
-			$html  = '<'.$name.' ';
-			$html .= $id !== FALSE ? ' id="' . $id . '"' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '"' : '' ;
+			$html  = '<'.esc_attr($name).' ';
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '"' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '"' : '' ;
 			$html .= '>';
 
-			$html .= '</'.$name.'>';
+			$html .= '</'.esc_attr($name).'>';
 
 			return $html;
 
@@ -327,9 +336,9 @@ if( !class_exists( 'ilrc_form' ) ) {
 
 		public function tableElementStart($name, $id, $class) {
 
-			$html  = '<'.$name.' ';
-			$html .= $id !== FALSE ? ' id="' . $id . '"' : '' ;
-			$html .= $class !== FALSE ? ' class="' . $class . '"' : '' ;
+			$html  = '<'.esc_attr($name).' ';
+			$html .= $id !== FALSE ? ' id="' . esc_attr($id) . '"' : '' ;
+			$html .= $class !== FALSE ? ' class="' . esc_attr($class) . '"' : '' ;
 			$html .= '>';
 
 			return $html;
@@ -342,7 +351,7 @@ if( !class_exists( 'ilrc_form' ) ) {
 
 		public function tableElementEnd($name) {
 
-			return '</'.$name.'>';
+			return '</'.esc_attr($name).'>';
 
 		}
 

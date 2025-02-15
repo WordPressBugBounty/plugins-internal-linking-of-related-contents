@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WIP\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-28 18:26+0100\n"
-"PO-Revision-Date: 2024-11-28 18:54+0100\n"
+"POT-Creation-Date: 2025-02-15 12:43+0100\n"
+"PO-Revision-Date: 2025-02-15 12:44+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -11,7 +11,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: __;gettext;gettext_noop;_e;esc_html__;esc_attr__\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop;_e;esc_html__;esc_attr__;"
+"esc_html_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 3.4.2\n"
@@ -26,10 +27,11 @@ msgid "Import/Export"
 msgstr "Importa/Esporta"
 
 #: core/admin/panel.php:16 core/admin/panel.php:211 core/admin/panel.php:213
+#: core/includes/class-notice.php:70
 msgid "Free vs Pro"
 msgstr "Gratuito vs Pro"
 
-#: core/admin/panel.php:17 core/includes/class-panel.php:1841
+#: core/admin/panel.php:17 core/includes/class-panel.php:1877
 msgid "Upgrade to Premium"
 msgstr "Aggiorna alla versione Premium"
 
@@ -131,7 +133,7 @@ msgid "2"
 msgstr "2"
 
 #: core/admin/panel.php:110 core/admin/panel.php:123
-#: core/includes/class-panel.php:1013
+#: core/includes/class-panel.php:1012
 msgid "3"
 msgstr "3"
 
@@ -220,26 +222,51 @@ msgstr ""
 msgid "Import / Export"
 msgstr "Importa / Esporta"
 
-#: core/includes/class-notice.php:55
+#: core/includes/class-notice.php:56
 msgid ""
 "Upgrade to Internal Linking of Related Contents Pro to unlock premium "
-"features like 9 premium templates, related posts based on post titles or "
-"custom keywords, option to exclude specific posts/categories or post tags, "
-"custom post type support, AMP support, and much more."
+"features like..."
 msgstr ""
-"Aggiorna alla versione premium di Internal Linking of Related Contents per "
-"sbloccare funzionalità premium come 9 modelli avanzati, articoli correlati "
-"basati sui titoli dei post o su parole chiave personalizzate, opzioni per "
-"escludere post, categorie o tag specifici, supporto per tipi di post "
-"personalizzati, compatibilità con AMP e molto altro ancora."
+"Passa a Internal Linking of Related Contents Pro per sbloccare funzionalità "
+"premium come..."
 
-#: core/includes/class-notice.php:56
-msgid "Dismiss this notice"
-msgstr "Elimina questo avviso"
+#: core/includes/class-notice.php:60
+msgid "9 additional premium templates"
+msgstr "9 template premium aggiuntivi"
 
-#: core/includes/class-notice.php:59
+#: core/includes/class-notice.php:61 core/includes/class-panel.php:1122
+msgid "Grouped related posts"
+msgstr "Post correlati raggruppati"
+
+#: core/includes/class-notice.php:62 core/includes/class-panel.php:1164
+msgid "Related content based of category and post tags"
+msgstr "Contenuti correlati in base alle categorie e tag degli articoli"
+
+#: core/includes/class-notice.php:63
+msgid "Related content based of post titles or custom keywords"
+msgstr ""
+"Contenuti correlati basati sui titoli degli articoli o su parole chiave "
+"personalizzate"
+
+#: core/includes/class-notice.php:64 core/includes/class-panel.php:1374
+msgid "Device selection"
+msgstr "Selezione del dispositivo"
+
+#: core/includes/class-notice.php:65
+msgid "Custom post type support"
+msgstr "Supporto per i tipi di post personalizzati"
+
+#: core/includes/class-notice.php:66 core/includes/class-panel.php:1752
+msgid "AMP support"
+msgstr "Supporto AMP"
+
+#: core/includes/class-notice.php:72
 msgid "Upgrade Now"
 msgstr "Aggiorna Ora"
+
+#: core/includes/class-notice.php:76
+msgid "Dismiss this notice"
+msgstr "Elimina questo avviso"
 
 #: core/includes/class-panel.php:41 core/includes/class-panel.php:42
 msgid "TIP Plugins"
@@ -278,105 +305,101 @@ msgstr " - Valuta questo plugin su WordPress.org"
 msgid "Save content"
 msgstr "Salva contenuto"
 
-#: core/includes/class-panel.php:703
+#: core/includes/class-panel.php:702
 msgid "Current plugin settings"
 msgstr "Opzioni plugin correnti"
 
-#: core/includes/class-panel.php:712
+#: core/includes/class-panel.php:711
 msgid "Download current plugin settings"
 msgstr "Scarica le impostazioni correnti del plugin"
 
-#: core/includes/class-panel.php:724 core/includes/class-panel.php:731
+#: core/includes/class-panel.php:723 core/includes/class-panel.php:730
 msgid "Reset plugin settings"
 msgstr "Cancella le opzioni del plugin"
 
-#: core/includes/class-panel.php:733
+#: core/includes/class-panel.php:732
 msgid ""
 "If you click the button above, the plugin options return to its default "
 "values"
 msgstr "Cliccando il pulsante che segue, le opzioni salvate verranno eliminate"
 
-#: core/includes/class-panel.php:745 core/includes/class-panel.php:752
+#: core/includes/class-panel.php:744 core/includes/class-panel.php:751
 msgid "Import plugin settings"
 msgstr "Importa le opzioni del plugin"
 
-#: core/includes/class-panel.php:776
+#: core/includes/class-panel.php:775
 msgid "Free"
 msgstr "Gratuito"
 
-#: core/includes/class-panel.php:780
+#: core/includes/class-panel.php:779
 msgid "Premium"
 msgstr "Premium"
 
-#: core/includes/class-panel.php:793
+#: core/includes/class-panel.php:792
 msgid "Custom colors"
 msgstr "Colori personalizzati"
 
-#: core/includes/class-panel.php:823
+#: core/includes/class-panel.php:822
 msgid "Option to edit the cta text"
 msgstr "Opzione per modificare il testo della call to action"
 
-#: core/includes/class-panel.php:853
+#: core/includes/class-panel.php:852
 msgid "Option to edit the top and bottom margin"
 msgstr "Opzione per modificare il margine superiore ed inferiore"
 
-#: core/includes/class-panel.php:883
+#: core/includes/class-panel.php:882
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: core/includes/class-panel.php:913
+#: core/includes/class-panel.php:912
 msgid "Related content based of post category"
 msgstr "Contenuti correlati in base alle categoria degli articoli"
 
-#: core/includes/class-panel.php:943
+#: core/includes/class-panel.php:942
 msgid "Related content based of post tag"
 msgstr "Contenuti correlati in base ai tag degli articoli"
 
-#: core/includes/class-panel.php:973
+#: core/includes/class-panel.php:972
 msgid "Option to edit the_content hook priority"
 msgstr "Opzione per modificare la priorità dell'hook the_content"
 
-#: core/includes/class-panel.php:1003
+#: core/includes/class-panel.php:1002
 msgid "Templates"
 msgstr "Template"
 
-#: core/includes/class-panel.php:1019
+#: core/includes/class-panel.php:1018
 msgid "12"
 msgstr "12"
 
-#: core/includes/class-panel.php:1033
+#: core/includes/class-panel.php:1032
 msgid "Related contents inside each post"
 msgstr "Contenuti correlati all'interno di ogni articolo"
 
-#: core/includes/class-panel.php:1043
+#: core/includes/class-panel.php:1042
 msgid "1 to 3"
 msgstr "1 a 3"
 
-#: core/includes/class-panel.php:1049
+#: core/includes/class-panel.php:1048
 msgid "1 to 20"
 msgstr "1 a 20"
 
-#: core/includes/class-panel.php:1063
+#: core/includes/class-panel.php:1062
 msgid "Interval between each related content"
 msgstr "Intervallo tra ogni contenuto correlato"
 
-#: core/includes/class-panel.php:1073
+#: core/includes/class-panel.php:1072
 msgid "1 to 6 paragraphs"
 msgstr "Da 1 a 6 paragrafi"
 
-#: core/includes/class-panel.php:1079
+#: core/includes/class-panel.php:1078
 msgid "1 to 20 paragraphs"
 msgstr "Da 1 a 20 paragrafi"
 
-#: core/includes/class-panel.php:1093
+#: core/includes/class-panel.php:1092
 msgid "Inline related posts"
 msgstr "Post correlati in linea"
 
-#: core/includes/class-panel.php:1123
-msgid "Grouped related posts"
-msgstr "Post correlati raggruppati"
-
-#: core/includes/class-panel.php:1133
+#: core/includes/class-panel.php:1132
 msgid ""
 "Now you can group all related posts in one place within your content. This "
 "feature simplifies navigation and provides your readers with quick access to "
@@ -387,11 +410,7 @@ msgstr ""
 "tuoi lettori un accesso rapido a tutti gli articoli correlati, migliorando "
 "l'esperienza utente del tuo sito web."
 
-#: core/includes/class-panel.php:1165
-msgid "Related content based of category and post tags"
-msgstr "Contenuti correlati in base alle categorie e tag degli articoli"
-
-#: core/includes/class-panel.php:1175
+#: core/includes/class-panel.php:1174
 msgid ""
 "Besides the options available on the free version, you can load the related "
 "contents based of categories and post tags."
@@ -399,11 +418,11 @@ msgstr ""
 "Oltre alle opzioni disponibili nella versione gratuita, puoi caricare i "
 "contenuti correlati in base a categorie e tag dei post."
 
-#: core/includes/class-panel.php:1207
+#: core/includes/class-panel.php:1206
 msgid "Custom keywords"
 msgstr "Parole chiave personalizzate"
 
-#: core/includes/class-panel.php:1217
+#: core/includes/class-panel.php:1216
 msgid ""
 "You can use custom keywords as Engine Search but you will need to set the "
 "keywords for each post to generate the list of related contents."
@@ -412,50 +431,46 @@ msgstr ""
 "dovrai impostare le parole chiave per ogni post al fine di generare la lista "
 "di contenuti correlati."
 
-#: core/includes/class-panel.php:1249
+#: core/includes/class-panel.php:1248
 msgid "Option to exclude specific categories"
 msgstr "Opzione per escludere categorie specifiche"
 
-#: core/includes/class-panel.php:1259
+#: core/includes/class-panel.php:1258
 msgid ""
 "You can select one or more categories to exclude from the related contents."
 msgstr ""
 "Puoi selezionare una o più categorie da escludere dai contenuti correlati."
 
-#: core/includes/class-panel.php:1291
+#: core/includes/class-panel.php:1290
 msgid "Option to exclude specific tags"
 msgstr "Opzione per escludere specifici tag"
 
-#: core/includes/class-panel.php:1301
+#: core/includes/class-panel.php:1300
 msgid ""
 "You can select one or more post tags to exclude from the related contents."
 msgstr "Puoi selezionare una o più tag da escludere dai contenuti correlati."
 
-#: core/includes/class-panel.php:1333
+#: core/includes/class-panel.php:1332
 msgid "Option to exclude specific posts"
 msgstr "Opzione per escludere articoli specifici"
 
-#: core/includes/class-panel.php:1343
+#: core/includes/class-panel.php:1342
 msgid "You can select one or more posts to exclude from the related contents."
 msgstr ""
 "Puoi selezionare uno o più articoli da escludere dai contenuti correlati."
 
-#: core/includes/class-panel.php:1375
-msgid "Device selection"
-msgstr "Selezione del dispositivo"
-
-#: core/includes/class-panel.php:1385
+#: core/includes/class-panel.php:1384
 msgid ""
 "You can select the device where you want to display the related contents."
 msgstr ""
 "Puoi selezionare il dispositivo in cui vuoi visualizzare i contenuti "
 "correlati."
 
-#: core/includes/class-panel.php:1417
+#: core/includes/class-panel.php:1416
 msgid "Option to edit the font size"
 msgstr "Opzione per modificare la grandezza dei font"
 
-#: core/includes/class-panel.php:1427
+#: core/includes/class-panel.php:1426
 msgid ""
 "You can set a different font size, based of the user device (mobile,tablet "
 "and desktop)."
@@ -463,11 +478,11 @@ msgstr ""
 "Puoi impostare una grandezza diversa del font, in base al dispositivo "
 "dell'utente (mobile, tablet e desktop)."
 
-#: core/includes/class-panel.php:1459
+#: core/includes/class-panel.php:1458
 msgid "Featured image"
 msgstr "Immagine in evidenza"
 
-#: core/includes/class-panel.php:1469
+#: core/includes/class-panel.php:1468
 msgid ""
 "You can display the featured image of related content, choosing one of "
 "premium available template."
@@ -475,27 +490,27 @@ msgstr ""
 "Puoi visualizzare l'immagine in evidenza dei contenuti correlati, scegliendo "
 "uno dei template premium disponibili."
 
-#: core/includes/class-panel.php:1501
+#: core/includes/class-panel.php:1500
 msgid "Order by option"
 msgstr "Opzione ordina per"
 
-#: core/includes/class-panel.php:1511
+#: core/includes/class-panel.php:1510
 msgid "You can select how to order the related contents."
 msgstr "Puoi selezionare come ordinare i contenuti correlati."
 
-#: core/includes/class-panel.php:1543
+#: core/includes/class-panel.php:1542
 msgid "Sort order option"
 msgstr "Opzione di ordinamento"
 
-#: core/includes/class-panel.php:1553
+#: core/includes/class-panel.php:1552
 msgid "You can select the ordering of related contents."
 msgstr "Puoi selezionare l'ordinamento dei contenuti correlati."
 
-#: core/includes/class-panel.php:1585
+#: core/includes/class-panel.php:1584
 msgid "Shortcode generator"
 msgstr "Generatore shortcode"
 
-#: core/includes/class-panel.php:1595
+#: core/includes/class-panel.php:1594
 msgid ""
 "For only WordPress 3.9.0 and higher versions is available a dynamic "
 "shortcode generator, to add a specific related post inside the WordPress "
@@ -505,11 +520,11 @@ msgstr ""
 "dinamico di shortcode, per aggiungere un post correlato specifico "
 "all'interno del contenuto WordPress."
 
-#: core/includes/class-panel.php:1629
+#: core/includes/class-panel.php:1626
 msgid "Advanced shortcode"
 msgstr "Shortcode avanzato"
 
-#: core/includes/class-panel.php:1639
+#: core/includes/class-panel.php:1636
 msgid ""
 "Use the new shortcode \"[ilrc_advanced]\" to display a list of related "
 "contents or a specific related post, based on available related posts."
@@ -518,11 +533,25 @@ msgstr ""
 "contenuti correlati o un post correlato specifico, in base ai post correlati "
 "disponibili."
 
-#: core/includes/class-panel.php:1674
+#: core/includes/class-panel.php:1668
+msgid "Archives shortcode"
+msgstr "Shortcode archivi"
+
+#: core/includes/class-panel.php:1678
+msgid ""
+"Use the new shortcode \"[ilrc_archives]\" to display a list of related posts "
+"automatically retrieved from a specific category or tag by setting the "
+"taxonomy ID."
+msgstr ""
+"Usa il nuovo shortcode [ilrc_archives] per visualizzare un elenco di "
+"articoli correlati recuperati automaticamente da una specifica categoria o "
+"tag impostando l'ID della tassonomia."
+
+#: core/includes/class-panel.php:1710
 msgid "Gutenberg block"
 msgstr "Blocco Gutenberg"
 
-#: core/includes/class-panel.php:1684
+#: core/includes/class-panel.php:1720
 msgid ""
 "Starting from the version 1.0.9, you can use the Gutenberg block to add a "
 "specific related post inside the WordPress content."
@@ -531,27 +560,23 @@ msgstr ""
 "aggiungere un post correlato specifico all'interno dei contenuti di "
 "WordPress."
 
-#: core/includes/class-panel.php:1716
-msgid "AMP support"
-msgstr "Supporto AMP"
-
-#: core/includes/class-panel.php:1726
+#: core/includes/class-panel.php:1762
 msgid "Display rightly the related posts in AMP pages."
 msgstr "Visualizza correttamente i post correlati nelle pagine AMP."
 
-#: core/includes/class-panel.php:1758
+#: core/includes/class-panel.php:1794
 msgid "Custom post types support"
 msgstr "Supporto ai custom post type"
 
-#: core/includes/class-panel.php:1768
+#: core/includes/class-panel.php:1804
 msgid "You can enable the related contents for specific custom post types."
 msgstr "Puoi abilitare i contenuti correlati per custom post type specifici."
 
-#: core/includes/class-panel.php:1800
+#: core/includes/class-panel.php:1836
 msgid "Automatic data import"
 msgstr "Importazione automatica dei dati"
 
-#: core/includes/class-panel.php:1810
+#: core/includes/class-panel.php:1846
 msgid ""
 "After the activation of Internal Linking of Related Contents Pro, all "
 "settings will be imported automatically from the free version."
@@ -559,13 +584,25 @@ msgstr ""
 "Dopo l'attivazione di Internal Linking of Related Contents Pro, tutte le "
 "impostazioni verranno importate automaticamente dalla versione gratuita."
 
-#: init.php:72
+#: init.php:73
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: init.php:73
+#: init.php:74
 msgid "Upgrade to PRO"
 msgstr "Aggiorna alla versione PRO"
+
+#~ msgid ""
+#~ "Upgrade to Internal Linking of Related Contents Pro to unlock premium "
+#~ "features like 9 premium templates, related posts based on post titles or "
+#~ "custom keywords, option to exclude specific posts/categories or post "
+#~ "tags, custom post type support, AMP support, and much more."
+#~ msgstr ""
+#~ "Aggiorna alla versione premium di Internal Linking of Related Contents "
+#~ "per sbloccare funzionalità premium come 9 modelli avanzati, articoli "
+#~ "correlati basati sui titoli dei post o su parole chiave personalizzate, "
+#~ "opzioni per escludere post, categorie o tag specifici, supporto per tipi "
+#~ "di post personalizzati, compatibilità con AMP e molto altro ancora."
 
 #~ msgid "9"
 #~ msgstr "9"
@@ -576,10 +613,6 @@ msgstr "Aggiorna alla versione PRO"
 #~ msgstr ""
 #~ "Per abilitare tutte le funzionalità e i nuovi template, si prega di "
 #~ "aggiornare alla versione premium."
-
-#~ msgid "Upgrade to Internal Linking of Related Contents Pro"
-#~ msgstr ""
-#~ "Aggiorna alla versione premium di Internal Linking of Related Contents Pro"
 
 #~ msgid "License Key"
 #~ msgstr "Chiave di licenza"

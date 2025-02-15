@@ -571,7 +571,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 				switch ( $element['tab'] ) {
 
-					case esc_attr($_GET['tab']):
+					case sanitize_text_field(wp_unslash($_GET['tab'])):
 
 						foreach ($element as $value) {
 
@@ -582,8 +582,8 @@ if( !class_exists( 'ilrc_panel' ) ) {
 								case 'start-form':
 
 									echo $ilrcForm->elementStart('div', str_replace(' ', '', $value['name']), FALSE );
-
-										echo $ilrcForm->formStart('post', '?page=ilrc_panel&tab=' . esc_attr($_GET['tab']) );
+										
+										echo $ilrcForm->formStart('post', '?page=ilrc_panel&tab=' . sanitize_text_field(wp_unslash($_GET['tab'])) );
 										echo $ilrcForm->input('ilrc_save_nonces', FALSE, FALSE, 'hidden', esc_attr(wp_create_nonce( 'ilrc_save_options' )));
 
 								break;
@@ -1615,8 +1615,6 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 										echo $ilrcForm->tableElementEnd('tr');
 
-
-
 										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'large');
@@ -1659,8 +1657,47 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 										echo $ilrcForm->tableElementEnd('tr');
 
+										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
 
+											echo $ilrcForm->tableElementStart('td', FALSE, 'large');
 
+												echo $ilrcForm->elementStart('div', FALSE, 'feature-wrap' );
+
+													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
+
+														echo esc_html__('Archives shortcode', 'internal-linking-of-related-contents');
+
+													echo $ilrcForm->elementEnd('h4');
+
+													echo $ilrcForm->elementStart('div', FALSE, 'feature-inline-row' );
+
+														echo $ilrcForm->element('span', FALSE, 'info-icon dashicon dashicons dashicons-info', FALSE );
+
+														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
+
+														echo esc_html__('Use the new shortcode "[ilrc_archives]" to display a list of related posts automatically retrieved from a specific category or tag by setting the taxonomy ID.', 'internal-linking-of-related-contents');
+
+														echo $ilrcForm->elementEnd('span');
+
+													echo $ilrcForm->elementEnd('div');
+
+												echo $ilrcForm->elementEnd('div');
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-no-alt', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-yes', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+										echo $ilrcForm->tableElementEnd('tr');
 
 										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
 

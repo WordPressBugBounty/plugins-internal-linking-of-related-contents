@@ -6,7 +6,7 @@ Tags: related posts, inline related posts, similar posts, contextual posts, inte
 Requires at least: 3.5.0
 Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -104,6 +104,13 @@ Install Internal Linking of Related Contents will add a new admin page, where yo
 13. Template 13 (Premium)
 
 == Changelog ==
+
+= 1.1.7 =
+Release date - February, 15 - 2025
+
+* Fixed : "Function _load_textdomain_just_in_time was called incorrectly" notice.
+* Updated : Italian translation
+* Edit : Code optimized
 
 = 1.1.6 =
 Release date - November, 28 - 2024
