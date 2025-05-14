@@ -32,13 +32,23 @@ $optpanel = array (
 
 						array(
 							'name' => esc_html__( 'Template','internal-linking-of-related-contents'),
-							'desc' => esc_html__( 'Select the template for the related contents.','internal-linking-of-related-contents'),
+							'desc' => esc_html__( 'Select the template for the related contents. Please note that the templates marked as PRO are not available in the free version. The preview is shown only to maintain visual consistency in the selection, especially for the last three templates introduced in version 1.1.8 of the plugin','internal-linking-of-related-contents'),
 							'id' => 'ilrc_template',
 							'type' => 'select',
 							'options' => array(
 								'template-1' => esc_html__( 'Template 1','internal-linking-of-related-contents'),
 								'template-2' => esc_html__( 'Template 2','internal-linking-of-related-contents'),
 								'template-3' => esc_html__( 'Template 3','internal-linking-of-related-contents'),
+								'template-4' => esc_html__( 'Template 4 (PRO)','internal-linking-of-related-contents'),
+								'template-5' => esc_html__( 'Template 5 (PRO)','internal-linking-of-related-contents'),
+								'template-6' => esc_html__( 'Template 6 (PRO)','internal-linking-of-related-contents'),
+								'template-7' => esc_html__( 'Template 7 (PRO)','internal-linking-of-related-contents'),
+								'template-8' => esc_html__( 'Template 8 (PRO)','internal-linking-of-related-contents'),
+								'template-9' => esc_html__( 'Template 9 (PRO)','internal-linking-of-related-contents'),
+								'template-10' => esc_html__( 'Template 10 (PRO)','internal-linking-of-related-contents'),
+								'template-11' => esc_html__( 'Template 11','internal-linking-of-related-contents'),
+								'template-12' => esc_html__( 'Template 12','internal-linking-of-related-contents'),
+								'template-13' => esc_html__( 'Template 13','internal-linking-of-related-contents')
 							),
 							'std' => 'template-2'
 						),
@@ -65,6 +75,14 @@ $optpanel = array (
 							'id' => 'ilrc_textcolor',
 							'type' => 'color',
 							'std' => '#ffffff'
+						),
+
+						array(
+							'name' => esc_html__( 'Text color at hover','internal-linking-of-related-contents'),
+							'desc' => esc_html__( 'Select the text color at hover.','internal-linking-of-related-contents'),
+							'id' => 'ilrc_textcolorhover',
+							'type' => 'color',
+							'std' => '#fff'
 						),
 
 						array(
@@ -170,6 +188,14 @@ $optpanel = array (
 							'id' => 'ilrc_hookpriority',
 							'type' => 'text',
 							'std' => '999'
+						),
+
+						array(
+							'name' => esc_html__( 'Show only recently published related posts','internal-linking-of-related-contents'),
+							'desc' => esc_html__( 'Display only related posts published in the last X days. Set to 0 to disable the filter.','internal-linking-of-related-contents'),
+							'id' => 'ilrc_filter_posts_by_days',
+							'type' => 'text',
+							'std' => '0'
 						),
 
 						array(

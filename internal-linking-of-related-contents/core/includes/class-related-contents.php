@@ -195,6 +195,13 @@ if( !class_exists( 'ilrc_content' ) ) {
 				'fields' => 'ids',
 			);
 
+			if ( ilrc_setting('ilrc_filter_posts_by_days') > 0 ) :
+
+				$n_days = ilrc_setting('ilrc_filter_posts_by_days');
+				$args['date_query'] = array('column' => 'post_date', 'after' => '- '.absint($n_days).' days');
+
+			endif;
+
 			switch (ilrc_setting('ilrc_enginesearch', 'categories')) {
 
 				case 'categories':

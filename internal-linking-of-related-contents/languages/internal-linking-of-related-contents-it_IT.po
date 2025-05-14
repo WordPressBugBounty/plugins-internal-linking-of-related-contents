@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WIP\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-15 12:43+0100\n"
-"PO-Revision-Date: 2025-02-15 12:44+0100\n"
+"POT-Creation-Date: 2025-05-13 19:45+0200\n"
+"PO-Revision-Date: 2025-05-13 19:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it\n"
@@ -26,12 +26,12 @@ msgstr "Impostazioni plugin"
 msgid "Import/Export"
 msgstr "Importa/Esporta"
 
-#: core/admin/panel.php:16 core/admin/panel.php:211 core/admin/panel.php:213
+#: core/admin/panel.php:16 core/admin/panel.php:237 core/admin/panel.php:239
 #: core/includes/class-notice.php:70
 msgid "Free vs Pro"
 msgstr "Gratuito vs Pro"
 
-#: core/admin/panel.php:17 core/includes/class-panel.php:1877
+#: core/admin/panel.php:17 core/includes/class-panel.php:1954
 msgid "Upgrade to Premium"
 msgstr "Aggiorna alla versione Premium"
 
@@ -40,8 +40,12 @@ msgid "Template"
 msgstr "Template"
 
 #: core/admin/panel.php:35
-msgid "Select the template for the related contents."
-msgstr "Seleziona il template per i contenuti correlati."
+msgid ""
+"Select the template for the related contents. Please note that the templates "
+"marked as PRO are not available in the free version. The preview is shown "
+"only to maintain visual consistency in the selection, especially for the "
+"last three templates introduced in version 1.1.8 of the plugin"
+msgstr ""
 
 #: core/admin/panel.php:39
 msgid "Template 1"
@@ -55,162 +59,229 @@ msgstr "Template 2"
 msgid "Template 3"
 msgstr "Template 3"
 
+#: core/admin/panel.php:42
+#, fuzzy
+#| msgid "Template 4"
+msgid "Template 4 (PRO)"
+msgstr "Template 4"
+
+#: core/admin/panel.php:43
+#, fuzzy
+#| msgid "Template 5"
+msgid "Template 5 (PRO)"
+msgstr "Template 5"
+
+#: core/admin/panel.php:44
+#, fuzzy
+#| msgid "Template 6"
+msgid "Template 6 (PRO)"
+msgstr "Template 6"
+
+#: core/admin/panel.php:45
+#, fuzzy
+#| msgid "Template 1"
+msgid "Template 7 (PRO)"
+msgstr "Template 1"
+
+#: core/admin/panel.php:46
+#, fuzzy
+#| msgid "Template 1"
+msgid "Template 8 (PRO)"
+msgstr "Template 1"
+
 #: core/admin/panel.php:47
+#, fuzzy
+#| msgid "Template 1"
+msgid "Template 9 (PRO)"
+msgstr "Template 1"
+
+#: core/admin/panel.php:48
+#, fuzzy
+#| msgid "Template 1"
+msgid "Template 10 (PRO)"
+msgstr "Template 1"
+
+#: core/admin/panel.php:49
+#, fuzzy
+#| msgid "Template 1"
+msgid "Template 11"
+msgstr "Template 1"
+
+#: core/admin/panel.php:50
+#, fuzzy
+#| msgid "Template 1"
+msgid "Template 12"
+msgstr "Template 1"
+
+#: core/admin/panel.php:51
+#, fuzzy
+#| msgid "Template 1"
+msgid "Template 13"
+msgstr "Template 1"
+
+#: core/admin/panel.php:57
 msgid "Background color"
 msgstr "Colore di sfondo"
 
-#: core/admin/panel.php:48
+#: core/admin/panel.php:58
 msgid "Select the background color."
 msgstr "Seleziona il colore di fondo."
 
-#: core/admin/panel.php:55
+#: core/admin/panel.php:65
 msgid "Background color at hover"
 msgstr "Colore di sfondo al passaggio del mouse"
 
-#: core/admin/panel.php:56
+#: core/admin/panel.php:66
 msgid "Select the background color at hover."
 msgstr "Seleziona il colore di sfondo al passaggio del mouse."
 
-#: core/admin/panel.php:63
+#: core/admin/panel.php:73
 msgid "Text color"
 msgstr "Colore del testo"
 
-#: core/admin/panel.php:64
+#: core/admin/panel.php:74
 msgid "Select the text color."
 msgstr "Seleziona il colore del testo."
 
-#: core/admin/panel.php:71
+#: core/admin/panel.php:81
+msgid "Text color at hover"
+msgstr "Colore del testo al passaggio del mouse"
+
+#: core/admin/panel.php:82
+msgid "Select the text color at hover."
+msgstr "Colore del testo al passaggio del mouse."
+
+#: core/admin/panel.php:89
 msgid "Button text color"
 msgstr "Colore del testo dei pulsanti"
 
-#: core/admin/panel.php:72
+#: core/admin/panel.php:90
 msgid "Select the text color for buttons."
 msgstr "Seleziona il colore del testo dei pulsanti."
 
-#: core/admin/panel.php:79
+#: core/admin/panel.php:97
 msgid "Margin top"
 msgstr "Margine superiore"
 
-#: core/admin/panel.php:80
+#: core/admin/panel.php:98
 msgid "Insert the margin above the related content."
 msgstr "Inserisci il margine sopra il contenuto correlato."
 
-#: core/admin/panel.php:87
+#: core/admin/panel.php:105
 msgid "Margin bottom"
 msgstr "Margine inferiore"
 
-#: core/admin/panel.php:88
+#: core/admin/panel.php:106
 msgid "Insert the margin below the related content."
 msgstr "Inserisci il margine sotto il contenuto correlato."
 
-#: core/admin/panel.php:95
+#: core/admin/panel.php:113
 msgid "Call to action"
 msgstr "Invito all’azione"
 
-#: core/admin/panel.php:96
+#: core/admin/panel.php:114
 msgid "Insert the call to action for all related contents."
 msgstr "Inserisci l’invito all’azione per tutti i contenuti correlati."
 
-#: core/admin/panel.php:99 core/includes/class-related-contents.php:260
+#: core/admin/panel.php:117 core/includes/class-related-contents.php:267
 #: core/shortcode/shortcode.php:14
 msgid "Read more"
 msgstr "Leggi di più"
 
-#: core/admin/panel.php:103
+#: core/admin/panel.php:121
 msgid "Count"
 msgstr "Conteggio"
 
-#: core/admin/panel.php:104
+#: core/admin/panel.php:122
 msgid "How many related contents do you want to display?."
 msgstr "Quanti contenuti correlati vuoi visualizzare?."
 
-#: core/admin/panel.php:108 core/admin/panel.php:121
+#: core/admin/panel.php:126 core/admin/panel.php:139
 msgid "1"
 msgstr "1"
 
-#: core/admin/panel.php:109 core/admin/panel.php:122
+#: core/admin/panel.php:127 core/admin/panel.php:140
 msgid "2"
 msgstr "2"
 
-#: core/admin/panel.php:110 core/admin/panel.php:123
-#: core/includes/class-panel.php:1012
+#: core/admin/panel.php:128 core/admin/panel.php:141
 msgid "3"
 msgstr "3"
 
-#: core/admin/panel.php:116
+#: core/admin/panel.php:134
 msgid "Interval"
 msgstr "Intervallo"
 
-#: core/admin/panel.php:117
+#: core/admin/panel.php:135
 msgid "After how many paragraphs do you want to insert a related content?"
 msgstr "Dopo quanti paragrafi vuoi inserire il contenuto correlato?"
 
-#: core/admin/panel.php:124
+#: core/admin/panel.php:142
 msgid "4"
 msgstr "4"
 
-#: core/admin/panel.php:125
+#: core/admin/panel.php:143
 msgid "5"
 msgstr "5"
 
-#: core/admin/panel.php:126
+#: core/admin/panel.php:144 core/includes/class-panel.php:1047
 msgid "6"
 msgstr "6"
 
-#: core/admin/panel.php:132
+#: core/admin/panel.php:150
 msgid "Engine search"
 msgstr "Motore di ricerca"
 
-#: core/admin/panel.php:133
+#: core/admin/panel.php:151
 msgid "How do you want to get the related contents?."
 msgstr "Come vuoi ottenere i contenuti correlati?."
 
-#: core/admin/panel.php:137
+#: core/admin/panel.php:155
 msgid "Based of post categories"
 msgstr "In base alle categorie del post"
 
-#: core/admin/panel.php:138
+#: core/admin/panel.php:156
 msgid "Based of post tags"
 msgstr "In base ai tag del post"
 
-#: core/admin/panel.php:144
+#: core/admin/panel.php:162
 msgid "Target attribute"
 msgstr "Attributo target"
 
-#: core/admin/panel.php:145
+#: core/admin/panel.php:163
 msgid "Set _blank to open the related content in a new window."
 msgstr ""
 "Imposta _blank per aprire il contenuto correlato in una nuova finestra."
 
-#: core/admin/panel.php:149
+#: core/admin/panel.php:167
 msgid "_self"
 msgstr "_self"
 
-#: core/admin/panel.php:150
+#: core/admin/panel.php:168
 msgid "_blank"
 msgstr "_blank"
 
-#: core/admin/panel.php:156
+#: core/admin/panel.php:174
 msgid "Rel attribute"
 msgstr "Attributo rel"
 
-#: core/admin/panel.php:157
+#: core/admin/panel.php:175
 msgid "Set the rel attribute for the related contents."
 msgstr "Imposta l’attributo rel per i contenuti correlati."
 
-#: core/admin/panel.php:161
+#: core/admin/panel.php:179
 msgid "dofollow"
 msgstr "dofollow"
 
-#: core/admin/panel.php:162
+#: core/admin/panel.php:180
 msgid "nofollow"
 msgstr "nofollow"
 
-#: core/admin/panel.php:168
+#: core/admin/panel.php:186
 msgid "the_content hook priority"
 msgstr "Priorità dell’hook the_content"
 
-#: core/admin/panel.php:169
+#: core/admin/panel.php:187
 msgid ""
 "If the related contents does not show, please change the priority of "
 "the_content hook."
@@ -218,7 +289,17 @@ msgstr ""
 "Se i contenuti correlati non vengono visualizzati, si prega di modificare la "
 "priorità dell’hook the_content."
 
-#: core/admin/panel.php:193 core/admin/panel.php:195
+#: core/admin/panel.php:194
+msgid "Show only recently published related posts"
+msgstr ""
+
+#: core/admin/panel.php:195
+msgid ""
+"Display only related posts published in the last X days. Set to 0 to disable "
+"the filter."
+msgstr ""
+
+#: core/admin/panel.php:219 core/admin/panel.php:221
 msgid "Import / Export"
 msgstr "Importa / Esporta"
 
@@ -231,14 +312,16 @@ msgstr ""
 "premium come..."
 
 #: core/includes/class-notice.php:60
-msgid "9 additional premium templates"
+#, fuzzy
+#| msgid "9 additional premium templates"
+msgid "7 additional premium templates"
 msgstr "9 template premium aggiuntivi"
 
-#: core/includes/class-notice.php:61 core/includes/class-panel.php:1122
+#: core/includes/class-notice.php:61 core/includes/class-panel.php:1157
 msgid "Grouped related posts"
 msgstr "Post correlati raggruppati"
 
-#: core/includes/class-notice.php:62 core/includes/class-panel.php:1164
+#: core/includes/class-notice.php:62 core/includes/class-panel.php:1199
 msgid "Related content based of category and post tags"
 msgstr "Contenuti correlati in base alle categorie e tag degli articoli"
 
@@ -248,7 +331,7 @@ msgstr ""
 "Contenuti correlati basati sui titoli degli articoli o su parole chiave "
 "personalizzate"
 
-#: core/includes/class-notice.php:64 core/includes/class-panel.php:1374
+#: core/includes/class-notice.php:64 core/includes/class-panel.php:1451
 msgid "Device selection"
 msgstr "Selezione del dispositivo"
 
@@ -256,7 +339,7 @@ msgstr "Selezione del dispositivo"
 msgid "Custom post type support"
 msgstr "Supporto per i tipi di post personalizzati"
 
-#: core/includes/class-notice.php:66 core/includes/class-panel.php:1752
+#: core/includes/class-notice.php:66 core/includes/class-panel.php:1829
 msgid "AMP support"
 msgstr "Supporto AMP"
 
@@ -273,133 +356,141 @@ msgid "TIP Plugins"
 msgstr "TIP Plugins"
 
 #: core/includes/class-panel.php:54 core/includes/class-panel.php:55
-#: core/includes/class-panel.php:539
+#: core/includes/class-panel.php:544
 msgid "Internal Linking of Related Contents"
 msgstr "Internal Linking of Related Contents"
 
-#: core/includes/class-panel.php:477
+#: core/includes/class-panel.php:482
 msgid "Options saved successfully."
 msgstr "Opzioni salvate con successo."
 
-#: core/includes/class-panel.php:540
+#: core/includes/class-panel.php:545
 msgid "Version: "
 msgstr "Versione: "
 
-#: core/includes/class-panel.php:541
+#: core/includes/class-panel.php:546
 msgid "by ThemeinProgress"
 msgstr "by ThemeinProgress"
 
-#: core/includes/class-panel.php:542
+#: core/includes/class-panel.php:547
 msgid " - Documentation"
 msgstr " - Documentazione"
 
-#: core/includes/class-panel.php:543
+#: core/includes/class-panel.php:548
 msgid " - Support"
 msgstr " - Supporto"
 
-#: core/includes/class-panel.php:544
+#: core/includes/class-panel.php:549
 msgid " - Rate this plugin on WordPress.org"
 msgstr " - Valuta questo plugin su WordPress.org"
 
-#: core/includes/class-panel.php:667
-msgid "Save content"
-msgstr "Salva contenuto"
+#: core/includes/class-panel.php:672
+#, fuzzy
+#| msgid "Settings"
+msgid "Save settings"
+msgstr "Impostazioni"
 
-#: core/includes/class-panel.php:702
+#: core/includes/class-panel.php:707
 msgid "Current plugin settings"
 msgstr "Opzioni plugin correnti"
 
-#: core/includes/class-panel.php:711
+#: core/includes/class-panel.php:716
 msgid "Download current plugin settings"
 msgstr "Scarica le impostazioni correnti del plugin"
 
-#: core/includes/class-panel.php:723 core/includes/class-panel.php:730
+#: core/includes/class-panel.php:728 core/includes/class-panel.php:735
 msgid "Reset plugin settings"
 msgstr "Cancella le opzioni del plugin"
 
-#: core/includes/class-panel.php:732
+#: core/includes/class-panel.php:737
 msgid ""
 "If you click the button above, the plugin options return to its default "
 "values"
 msgstr "Cliccando il pulsante che segue, le opzioni salvate verranno eliminate"
 
-#: core/includes/class-panel.php:744 core/includes/class-panel.php:751
+#: core/includes/class-panel.php:749 core/includes/class-panel.php:756
 msgid "Import plugin settings"
 msgstr "Importa le opzioni del plugin"
 
-#: core/includes/class-panel.php:775
+#: core/includes/class-panel.php:780
 msgid "Free"
 msgstr "Gratuito"
 
-#: core/includes/class-panel.php:779
+#: core/includes/class-panel.php:784
 msgid "Premium"
 msgstr "Premium"
 
-#: core/includes/class-panel.php:792
+#: core/includes/class-panel.php:797
 msgid "Custom colors"
 msgstr "Colori personalizzati"
 
-#: core/includes/class-panel.php:822
+#: core/includes/class-panel.php:827
 msgid "Option to edit the cta text"
 msgstr "Opzione per modificare il testo della call to action"
 
-#: core/includes/class-panel.php:852
+#: core/includes/class-panel.php:857
 msgid "Option to edit the top and bottom margin"
 msgstr "Opzione per modificare il margine superiore ed inferiore"
 
-#: core/includes/class-panel.php:882
+#: core/includes/class-panel.php:887
 msgid "Shortcode"
 msgstr "Shortcode"
 
-#: core/includes/class-panel.php:912
+#: core/includes/class-panel.php:917
 msgid "Related content based of post category"
 msgstr "Contenuti correlati in base alle categoria degli articoli"
 
-#: core/includes/class-panel.php:942
+#: core/includes/class-panel.php:947
 msgid "Related content based of post tag"
 msgstr "Contenuti correlati in base ai tag degli articoli"
 
-#: core/includes/class-panel.php:972
+#: core/includes/class-panel.php:977
 msgid "Option to edit the_content hook priority"
 msgstr "Opzione per modificare la priorità dell'hook the_content"
 
-#: core/includes/class-panel.php:1002
+#: core/includes/class-panel.php:1007
+msgid "Option to show only recently published related posts."
+msgstr ""
+
+#: core/includes/class-panel.php:1037
 msgid "Templates"
 msgstr "Template"
 
-#: core/includes/class-panel.php:1018
-msgid "12"
-msgstr "12"
+#: core/includes/class-panel.php:1053
+#, fuzzy
+#| msgid "1"
+msgid "13"
+msgstr "1"
 
-#: core/includes/class-panel.php:1032
+#: core/includes/class-panel.php:1067
 msgid "Related contents inside each post"
 msgstr "Contenuti correlati all'interno di ogni articolo"
 
-#: core/includes/class-panel.php:1042
+#: core/includes/class-panel.php:1077
 msgid "1 to 3"
 msgstr "1 a 3"
 
-#: core/includes/class-panel.php:1048
+#: core/includes/class-panel.php:1083
 msgid "1 to 20"
 msgstr "1 a 20"
 
-#: core/includes/class-panel.php:1062
+#: core/includes/class-panel.php:1097
 msgid "Interval between each related content"
 msgstr "Intervallo tra ogni contenuto correlato"
 
-#: core/includes/class-panel.php:1072
+#: core/includes/class-panel.php:1107
 msgid "1 to 6 paragraphs"
 msgstr "Da 1 a 6 paragrafi"
 
-#: core/includes/class-panel.php:1078
+#: core/includes/class-panel.php:1113
 msgid "1 to 20 paragraphs"
 msgstr "Da 1 a 20 paragrafi"
 
-#: core/includes/class-panel.php:1092
+#: core/includes/class-panel.php:1127
 msgid "Inline related posts"
 msgstr "Post correlati in linea"
 
-#: core/includes/class-panel.php:1132
+#: core/includes/class-panel.php:1167
 msgid ""
 "Now you can group all related posts in one place within your content. This "
 "feature simplifies navigation and provides your readers with quick access to "
@@ -410,7 +501,7 @@ msgstr ""
 "tuoi lettori un accesso rapido a tutti gli articoli correlati, migliorando "
 "l'esperienza utente del tuo sito web."
 
-#: core/includes/class-panel.php:1174
+#: core/includes/class-panel.php:1209
 msgid ""
 "Besides the options available on the free version, you can load the related "
 "contents based of categories and post tags."
@@ -418,11 +509,11 @@ msgstr ""
 "Oltre alle opzioni disponibili nella versione gratuita, puoi caricare i "
 "contenuti correlati in base a categorie e tag dei post."
 
-#: core/includes/class-panel.php:1206
+#: core/includes/class-panel.php:1241
 msgid "Custom keywords"
 msgstr "Parole chiave personalizzate"
 
-#: core/includes/class-panel.php:1216
+#: core/includes/class-panel.php:1251
 msgid ""
 "You can use custom keywords as Engine Search but you will need to set the "
 "keywords for each post to generate the list of related contents."
@@ -431,46 +522,61 @@ msgstr ""
 "dovrai impostare le parole chiave per ogni post al fine di generare la lista "
 "di contenuti correlati."
 
-#: core/includes/class-panel.php:1248
+#: core/includes/class-panel.php:1283
 msgid "Option to exclude specific categories"
 msgstr "Opzione per escludere categorie specifiche"
 
-#: core/includes/class-panel.php:1258
+#: core/includes/class-panel.php:1293
 msgid ""
 "You can select one or more categories to exclude from the related contents."
 msgstr ""
 "Puoi selezionare una o più categorie da escludere dai contenuti correlati."
 
-#: core/includes/class-panel.php:1290
+#: core/includes/class-panel.php:1325
 msgid "Option to exclude specific tags"
 msgstr "Opzione per escludere specifici tag"
 
-#: core/includes/class-panel.php:1300
+#: core/includes/class-panel.php:1335
 msgid ""
 "You can select one or more post tags to exclude from the related contents."
 msgstr "Puoi selezionare una o più tag da escludere dai contenuti correlati."
 
-#: core/includes/class-panel.php:1332
+#: core/includes/class-panel.php:1367
 msgid "Option to exclude specific posts"
 msgstr "Opzione per escludere articoli specifici"
 
-#: core/includes/class-panel.php:1342
+#: core/includes/class-panel.php:1377
 msgid "You can select one or more posts to exclude from the related contents."
 msgstr ""
 "Puoi selezionare uno o più articoli da escludere dai contenuti correlati."
 
-#: core/includes/class-panel.php:1384
+#: core/includes/class-panel.php:1409
+#, fuzzy
+#| msgid "Option to edit the cta text"
+msgid "Option to remove the call-to-action text"
+msgstr "Opzione per modificare il testo della call to action"
+
+#: core/includes/class-panel.php:1419
+#, fuzzy
+#| msgid ""
+#| "You can select one or more categories to exclude from the related "
+#| "contents."
+msgid "You can now remove the call to action text from the related posts."
+msgstr ""
+"Puoi selezionare una o più categorie da escludere dai contenuti correlati."
+
+#: core/includes/class-panel.php:1461
 msgid ""
 "You can select the device where you want to display the related contents."
 msgstr ""
 "Puoi selezionare il dispositivo in cui vuoi visualizzare i contenuti "
 "correlati."
 
-#: core/includes/class-panel.php:1416
+#: core/includes/class-panel.php:1493
 msgid "Option to edit the font size"
 msgstr "Opzione per modificare la grandezza dei font"
 
-#: core/includes/class-panel.php:1426
+#: core/includes/class-panel.php:1503
 msgid ""
 "You can set a different font size, based of the user device (mobile,tablet "
 "and desktop)."
@@ -478,11 +584,11 @@ msgstr ""
 "Puoi impostare una grandezza diversa del font, in base al dispositivo "
 "dell'utente (mobile, tablet e desktop)."
 
-#: core/includes/class-panel.php:1458
+#: core/includes/class-panel.php:1535
 msgid "Featured image"
 msgstr "Immagine in evidenza"
 
-#: core/includes/class-panel.php:1468
+#: core/includes/class-panel.php:1545
 msgid ""
 "You can display the featured image of related content, choosing one of "
 "premium available template."
@@ -490,27 +596,27 @@ msgstr ""
 "Puoi visualizzare l'immagine in evidenza dei contenuti correlati, scegliendo "
 "uno dei template premium disponibili."
 
-#: core/includes/class-panel.php:1500
+#: core/includes/class-panel.php:1577
 msgid "Order by option"
 msgstr "Opzione ordina per"
 
-#: core/includes/class-panel.php:1510
+#: core/includes/class-panel.php:1587
 msgid "You can select how to order the related contents."
 msgstr "Puoi selezionare come ordinare i contenuti correlati."
 
-#: core/includes/class-panel.php:1542
+#: core/includes/class-panel.php:1619
 msgid "Sort order option"
 msgstr "Opzione di ordinamento"
 
-#: core/includes/class-panel.php:1552
+#: core/includes/class-panel.php:1629
 msgid "You can select the ordering of related contents."
 msgstr "Puoi selezionare l'ordinamento dei contenuti correlati."
 
-#: core/includes/class-panel.php:1584
+#: core/includes/class-panel.php:1661
 msgid "Shortcode generator"
 msgstr "Generatore shortcode"
 
-#: core/includes/class-panel.php:1594
+#: core/includes/class-panel.php:1671
 msgid ""
 "For only WordPress 3.9.0 and higher versions is available a dynamic "
 "shortcode generator, to add a specific related post inside the WordPress "
@@ -520,11 +626,11 @@ msgstr ""
 "dinamico di shortcode, per aggiungere un post correlato specifico "
 "all'interno del contenuto WordPress."
 
-#: core/includes/class-panel.php:1626
+#: core/includes/class-panel.php:1703
 msgid "Advanced shortcode"
 msgstr "Shortcode avanzato"
 
-#: core/includes/class-panel.php:1636
+#: core/includes/class-panel.php:1713
 msgid ""
 "Use the new shortcode \"[ilrc_advanced]\" to display a list of related "
 "contents or a specific related post, based on available related posts."
@@ -533,11 +639,11 @@ msgstr ""
 "contenuti correlati o un post correlato specifico, in base ai post correlati "
 "disponibili."
 
-#: core/includes/class-panel.php:1668
+#: core/includes/class-panel.php:1745
 msgid "Archives shortcode"
 msgstr "Shortcode archivi"
 
-#: core/includes/class-panel.php:1678
+#: core/includes/class-panel.php:1755
 msgid ""
 "Use the new shortcode \"[ilrc_archives]\" to display a list of related posts "
 "automatically retrieved from a specific category or tag by setting the "
@@ -547,11 +653,11 @@ msgstr ""
 "articoli correlati recuperati automaticamente da una specifica categoria o "
 "tag impostando l'ID della tassonomia."
 
-#: core/includes/class-panel.php:1710
+#: core/includes/class-panel.php:1787
 msgid "Gutenberg block"
 msgstr "Blocco Gutenberg"
 
-#: core/includes/class-panel.php:1720
+#: core/includes/class-panel.php:1797
 msgid ""
 "Starting from the version 1.0.9, you can use the Gutenberg block to add a "
 "specific related post inside the WordPress content."
@@ -560,23 +666,23 @@ msgstr ""
 "aggiungere un post correlato specifico all'interno dei contenuti di "
 "WordPress."
 
-#: core/includes/class-panel.php:1762
+#: core/includes/class-panel.php:1839
 msgid "Display rightly the related posts in AMP pages."
 msgstr "Visualizza correttamente i post correlati nelle pagine AMP."
 
-#: core/includes/class-panel.php:1794
+#: core/includes/class-panel.php:1871
 msgid "Custom post types support"
 msgstr "Supporto ai custom post type"
 
-#: core/includes/class-panel.php:1804
+#: core/includes/class-panel.php:1881
 msgid "You can enable the related contents for specific custom post types."
 msgstr "Puoi abilitare i contenuti correlati per custom post type specifici."
 
-#: core/includes/class-panel.php:1836
+#: core/includes/class-panel.php:1913
 msgid "Automatic data import"
 msgstr "Importazione automatica dei dati"
 
-#: core/includes/class-panel.php:1846
+#: core/includes/class-panel.php:1923
 msgid ""
 "After the activation of Internal Linking of Related Contents Pro, all "
 "settings will be imported automatically from the free version."
@@ -591,6 +697,15 @@ msgstr "Impostazioni"
 #: init.php:74
 msgid "Upgrade to PRO"
 msgstr "Aggiorna alla versione PRO"
+
+#~ msgid "Select the template for the related contents."
+#~ msgstr "Seleziona il template per i contenuti correlati."
+
+#~ msgid "Save content"
+#~ msgstr "Salva contenuto"
+
+#~ msgid "12"
+#~ msgstr "12"
 
 #~ msgid ""
 #~ "Upgrade to Internal Linking of Related Contents Pro to unlock premium "
@@ -622,21 +737,6 @@ msgstr "Aggiorna alla versione PRO"
 
 #~ msgid "Insert the license key received by email to activate "
 #~ msgstr "Inserisci la chiave di licenza ricevuta per email per attivare "
-
-#~ msgid "Template 4"
-#~ msgstr "Template 4"
-
-#~ msgid "Template 5"
-#~ msgstr "Template 5"
-
-#~ msgid "Template 6"
-#~ msgstr "Template 6"
-
-#~ msgid "Text color at hover"
-#~ msgstr "Colore del testo al passaggio del mouse"
-
-#~ msgid "Select the text color at hover."
-#~ msgstr "Colore del testo al passaggio del mouse."
 
 #~ msgid "Order by"
 #~ msgstr "Ordina per"

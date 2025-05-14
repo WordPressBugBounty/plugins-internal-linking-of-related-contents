@@ -1,22 +1,4 @@
 /* ===============================================
-   ACE EDITOR
-   =============================================== */
-
-.aceEditor {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width:100%;
-	height:100%;
-}
-
-.ace_editor {
-	background:#fafafa !important;
-}
-
-/* ===============================================
    GENERALS
    =============================================== */
 
@@ -366,8 +348,7 @@ input[type=file]:focus {
 	background:none;
 }
 
-.ilrc_panel_snippet_order div.ilrc_panel_box.deleteSlot ,
-.ilrc_panel_container div.ilrc_panel_box.WIP_plugin_save_box {
+.ilrc_panel_container div.ilrc_panel_box.ilrc_panel_save_button {
 	background:#fafafa;
 	border:none;
 }
@@ -513,7 +494,7 @@ div#Slideshow .ilrc_panel_container .ilrc_panel_box .button.upload_button {
 .ilrc_panel_container .input-right {
 	float:right;
 	width:79%;
-	padding:0
+	padding:0 10px 0 0
 }
 
 .ilrc_panel_container .ilrc_panel_box.ilrc_input {
@@ -544,4 +525,14 @@ div#Slideshow .ilrc_panel_container .ilrc_panel_box .button.upload_button {
 .ilrc_panel_container .ilrc_template_preview img {
 	width:500px;
 	max-width:calc(100% -  20px);
+}
+
+#ilrc_template option[value="template-4"],
+#ilrc_template option[value="template-5"],
+#ilrc_template option[value="template-6"],
+#ilrc_template option[value="template-7"],
+#ilrc_template option[value="template-8"],
+#ilrc_template option[value="template-9"],
+#ilrc_template option[value="template-10"] {
+  color: #888;
 }

@@ -57,7 +57,7 @@ if( !class_exists( 'ilrc_admin_notice' ) ) {
 
 					<p class="notice-coupon-message">
 
-						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( '9 additional premium templates', 'internal-linking-of-related-contents' ); ?><br/>
+						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( '7 additional premium templates', 'internal-linking-of-related-contents' ); ?><br/>
 						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( 'Grouped related posts', 'internal-linking-of-related-contents' ); ?><br/>
 						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( 'Related content based of category and post tags', 'internal-linking-of-related-contents' ); ?><br/>
 						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( 'Related content based of post titles or custom keywords', 'internal-linking-of-related-contents' ); ?><br/>

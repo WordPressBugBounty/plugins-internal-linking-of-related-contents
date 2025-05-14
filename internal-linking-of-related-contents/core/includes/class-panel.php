@@ -121,6 +121,9 @@ if( !class_exists( 'ilrc_panel' ) ) {
 				'template-1',
 				'template-2',
 				'template-3',
+				'template-11',
+				'template-12',
+				'template-13',
 			);
 
 			if ( in_array($k, $allowedOptions)) {
@@ -337,6 +340,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 				case 'ilrc_backgroundcolor':
 				case 'ilrc_backgroundcolorhover':
 				case 'ilrc_textcolor':
+				case 'ilrc_textcolorhover':
 				case 'ilrc_ctatextcolor':
 
 					$tosave = sanitize_hex_color($value);
@@ -374,6 +378,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 				break;
 
 				case 'ilrc_hookpriority':
+				case 'ilrc_filter_posts_by_days':
 
 					$tosave = absint($value);
 
@@ -662,9 +667,9 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 								case "save-button":
 
-									echo $ilrcForm->elementStart('div', FALSE, $plugin_slug . 'box WIP_plugin_save_box');
+									echo $ilrcForm->elementStart('div', FALSE, $plugin_slug . 'box ' . $plugin_slug . 'save_button');
 
-										echo $ilrcForm->input('ilrc_save_settings_action', FALSE, 'button', 'submit', esc_html__('Save content', 'internal-linking-of-related-contents' ));
+										echo $ilrcForm->input('ilrc_save_settings_action', 'ilrc_save_settings', 'button', 'submit', esc_html__('Save settings', 'internal-linking-of-related-contents' ));
 
 									echo $ilrcForm->elementEnd('div');
 
@@ -999,6 +1004,36 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
+														echo esc_html__('Option to show only recently published related posts.', 'internal-linking-of-related-contents');
+
+													echo $ilrcForm->elementEnd('h4');
+
+												echo $ilrcForm->elementEnd('div');
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+											echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-yes', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-yes', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+										echo $ilrcForm->tableElementEnd('tr');
+
+										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'large');
+
+												echo $ilrcForm->elementStart('div', FALSE, 'feature-wrap' );
+
+													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
+
 														echo esc_html__('Templates', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
@@ -1009,13 +1044,13 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('3', 'internal-linking-of-related-contents');
+												echo esc_html__('6', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('12', 'internal-linking-of-related-contents');
+												echo esc_html__('13', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
@@ -1340,6 +1375,48 @@ if( !class_exists( 'ilrc_panel' ) ) {
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
 															echo esc_html__('You can select one or more posts to exclude from the related contents.', 'internal-linking-of-related-contents');
+
+														echo $ilrcForm->elementEnd('span');
+
+													echo $ilrcForm->elementEnd('div');
+
+												echo $ilrcForm->elementEnd('div');
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-no-alt', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-yes', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+										echo $ilrcForm->tableElementEnd('tr');
+
+										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'large');
+
+												echo $ilrcForm->elementStart('div', FALSE, 'feature-wrap' );
+
+													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
+
+														echo esc_html__('Option to remove the call-to-action text', 'internal-linking-of-related-contents');
+
+													echo $ilrcForm->elementEnd('h4');
+
+													echo $ilrcForm->elementStart('div', FALSE, 'feature-inline-row' );
+
+														echo $ilrcForm->element('span', FALSE, 'info-icon dashicon dashicons dashicons-info', FALSE );
+
+														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
+
+															echo esc_html__('You can now remove the call to action text from the related posts.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 

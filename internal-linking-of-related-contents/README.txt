@@ -4,9 +4,9 @@ Contributors: alexvtn
 Donate link: https://www.themeinprogress.com
 Tags: related posts, inline related posts, similar posts, contextual posts, internal linking
 Requires at least: 3.5.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -29,7 +29,7 @@ With our plugin, you can insert inline similar posts within your WordPress artic
 > In addition to inline related posts, you can also group all related articles in one place within your content. This innovative feature streamlines navigation and provides your readers with quick access to all pertinent articles, further enhancing your website's user experience.<br><br>
 
 > <strong>Featured image</strong><br>
-> Select one of nine available premium template to present the featured image alongside the related articles.<br><br>
+> Select one of seven available premium template to present the featured image alongside the related articles.<br><br>
 
 > <strong>Order by option</strong><br>
 > Select how to order the related contents.<br><br>
@@ -57,6 +57,9 @@ With our plugin, you can insert inline similar posts within your WordPress artic
 
 > <strong>Post to exclude</strong><br>
 > You can select one or more posts to exclude from the related contents.<br><br>
+
+> <strong>Remove the call-to-action text</strong><br>
+> You can remove the call to action text from the related posts.<br><br>
 
 > <strong>AMP support</strong><br>
 > Display rightly the related posts in AMP pages.<br><br>
@@ -99,11 +102,20 @@ Install Internal Linking of Related Contents will add a new admin page, where yo
 8. Template 8 (Premium)
 9. Template 9 (Premium)
 10. Template 10 (Premium)
-11. Template 11 (Premium)
-12. Template 12 (Premium)
-13. Template 13 (Premium)
+11. Template 11
+12. Template 12
+13. Template 13
 
 == Changelog ==
+
+= 1.1.8 =
+Release date - May, 14 - 2025
+
+* Added : Option to show only recently published related posts.
+* Added : Option to manage the text color at hover  
+* Added : New templates (template 11, 12 and 13)
+* Edit : Code optimized
+* Tested with WordPress 6.8
 
 = 1.1.7 =
 Release date - February, 15 - 2025

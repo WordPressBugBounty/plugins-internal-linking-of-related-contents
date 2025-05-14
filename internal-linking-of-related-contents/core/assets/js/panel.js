@@ -9,7 +9,16 @@ jQuery.noConflict()(function($){
 	function ilrc_get_template_preview(option) {
 
 		var $template = $('#ilrc_template');
+		var $template_val = $template.val();
+
+		var template_array = ['template-4','template-5','template-6','template-7','template-8','template-9','template-10'];
 		
+		if(jQuery.inArray($template_val, template_array) != -1) {
+			$('#ilrc_save_settings').attr('disabled', true);
+		} else {
+			$('#ilrc_save_settings').attr('disabled', false);
+		}
+
 		if (!$template.next().hasClass('ilrc_template_preview')) {
 			$('<div>').addClass('ilrc_template_preview').insertAfter($template);
 		}
@@ -48,6 +57,24 @@ jQuery.noConflict()(function($){
 
     	if (!window.confirm('Do you want to restore the plugin settings？')) {
 
+			return false;
+
+		}
+
+	});
+
+/* ===============================================
+   SAVE PLUGIN SETTINGS
+   =============================================== */
+
+	$('#ilrc_save_settings').on("click", function(){
+
+		var template = $('#ilrc_template').val();
+		var template_array = ['template-4','template-5','template-6','template-7','template-8','template-9','template-10'];
+
+		if(jQuery.inArray(template, template_array) != -1) {
+
+			window.alert("The selected layout is not available on the free version.");
 			return false;
 
 		}

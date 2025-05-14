@@ -152,3 +152,161 @@
 .internal-linking-related-contents .template-3:focus {
 	background:#e74c3c !important;
 }
+
+/* Template 11
+   ---- */
+
+.internal-linking-related-contents.internal-linking-related-contents-template-11 {
+	width:100%;
+	display:block;
+	padding:0px;
+}
+
+.internal-linking-related-contents.internal-linking-related-contents-template-11 span.cta {
+	position: relative;
+    display: inline-block;
+	font-weight: bold;
+	text-align:center;
+	margin-bottom: 5px;
+	margin-right: 0;
+	padding:0;
+}
+
+.internal-linking-related-contents.internal-linking-related-contents-template-11 span.cta:after {
+	position: absolute;
+	content:'';
+	top: 50%;
+    right: -20px;
+	margin-top: -2px;
+	border: solid #616161;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	-webkit-transform: translate(0, -50%) rotate(45deg);
+	transform: translate(0, -50%) rotate(45deg);
+}
+
+.internal-linking-related-contents a.template-11 {
+	text-align:center;
+	display: inline;
+	line-height: 45px;
+	padding: 8px;
+	background:#ec7063;
+	color:#fff;
+	font-weight: 500;
+	-webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+	-webkit-transition: background-color .3s ease, color .3s ease;
+	-moz-transition: background-color .3s ease, color .3s ease;
+	-o-transition: background-color .3s ease, color .3s ease;
+	transition: background-color .3s ease, color .3s ease;
+}
+
+.internal-linking-related-contents a.template-11:hover ,
+.internal-linking-related-contents a.template-11:active ,
+.internal-linking-related-contents a.template-11:focus {
+	background:#e74c3c !important;
+}
+
+/* Template 12
+   ---- */
+
+.internal-linking-related-contents.internal-linking-related-contents-template-12 {
+	width:100%;
+	display:block;
+	padding:0px;
+	text-align:left;
+}
+
+.internal-linking-related-contents.internal-linking-related-contents-template-12 span.cta {
+	position: relative;
+    display: inline-block;
+	font-weight: bold;
+	text-align:left;
+	margin-bottom: 5px;
+	margin-right: 0;
+	padding:0;
+}
+
+.internal-linking-related-contents.internal-linking-related-contents-template-12 span.cta:after {
+	position: absolute;
+	content:'';
+	top: 50%;
+    right: -20px;
+	margin-top: -2px;
+	border: solid #616161;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	-webkit-transform: translate(0, -50%) rotate(45deg);
+	transform: translate(0, -50%) rotate(45deg);
+}
+
+.internal-linking-related-contents a.template-12 {
+	text-align:left;
+	display: inline;
+	line-height: 45px;
+	padding: 8px;
+	background:#ec7063;
+	color:#fff;
+	font-weight: 500;
+	-webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+	-webkit-transition: background-color .3s ease, color .3s ease;
+	-moz-transition: background-color .3s ease, color .3s ease;
+	-o-transition: background-color .3s ease, color .3s ease;
+	transition: background-color .3s ease, color .3s ease;
+}
+
+.internal-linking-related-contents a.template-12:hover ,
+.internal-linking-related-contents a.template-12:active ,
+.internal-linking-related-contents a.template-12:focus {
+	background:#e74c3c !important;
+}
+
+/* Template 13
+   ---- */
+
+.internal-linking-related-contents.internal-linking-related-contents-template-13 {
+	width:100%;
+	display:flex;
+	padding:0px;
+	text-align:left;
+}
+
+.internal-linking-related-contents.internal-linking-related-contents-template-13 span.cta {
+	position: relative;
+    flex-shrink: 0; 
+	font-weight: bold;
+	text-align:left;
+	line-height: inherit;
+	margin-bottom: 0;
+	margin-right: 0;
+	padding:0;
+}
+
+.internal-linking-related-contents.internal-linking-related-contents-template-13 .ilrcp-related-post {
+    flex-grow: 1;
+    word-break: break-word;
+}
+
+.internal-linking-related-contents a.template-13 {
+	text-align:left;
+    display: block;
+	line-height: inherit;
+	padding: 0 8px;
+	font-weight: 500;
+	-webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+	-webkit-transition: color .3s ease, color .3s ease;
+	-moz-transition: color .3s ease, color .3s ease;
+	-o-transition: color .3s ease, color .3s ease;
+	transition: color .3s ease, color .3s ease;
+}
+
+.internal-linking-related-contents a.template-13:hover ,
+.internal-linking-related-contents a.template-13:active ,
+.internal-linking-related-contents a.template-13:focus {
+	color:#e74c3c !important;
+	background: none !important;
+}
