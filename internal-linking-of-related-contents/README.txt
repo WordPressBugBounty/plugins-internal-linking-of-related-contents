@@ -6,7 +6,7 @@ Tags: related posts, inline related posts, similar posts, contextual posts, inte
 Requires at least: 3.5.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 1.1.8
+Stable tag: 1.1.9
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -107,6 +107,11 @@ Install Internal Linking of Related Contents will add a new admin page, where yo
 13. Template 13
 
 == Changelog ==
+
+= 1.1.9 =
+Release date - June, 07 - 2025
+
+* Security: Fixed Broken Access Control vulnerability affecting versions <= 1.1.8
 
 = 1.1.8 =
 Release date - May, 14 - 2025

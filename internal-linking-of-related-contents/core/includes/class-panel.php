@@ -8,8 +8,8 @@ if( !class_exists( 'ilrc_panel' ) ) {
 	class ilrc_panel {
 
 		public $panel_fields;
-    public $plugin_slug;
-    public $plugin_optionname;
+		public $plugin_slug;
+		public $plugin_optionname;
 
 		/**
 		 * Constructor
@@ -398,6 +398,10 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 			global $ilrc_message;
 
+			if (!current_user_can('manage_options')) {
+				exit;
+			}
+
 			$ilrc_setting = get_option($this->plugin_optionname);
 
 			if ( $ilrc_setting != false ) :
@@ -410,7 +414,12 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 			endif;
 
-			if (isset($_GET['action']) && ($_GET['action'] == 'ilrc_backup_download')) {
+			if (
+				isset($_GET['action']) &&
+				($_GET['action'] == 'ilrc_export_action') &&
+				isset($_GET['ilrc_export_nonce']) &&
+				wp_verify_nonce(esc_attr($_GET['ilrc_export_nonce']), 'ilrc_export_options' )
+			) {
 
 				header("Cache-Control: public, must-revalidate");
 				header("Pragma: hack");
@@ -421,15 +430,24 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 			}
 
-			if (isset($_GET['action']) && ($_GET['action'] == 'ilrc_backup_reset')) {
+			if (
+				isset($_GET['action']) &&
+				($_GET['action'] == 'ilrc_backup_reset') &&
+				isset($_GET['ilrc_reset_nonce']) &&
+				wp_verify_nonce(esc_attr($_GET['ilrc_reset_nonce']), 'ilrc_reset_options' )
+			) {
 
-				update_option( $this->plugin_optionname,'');
+				update_option( $this->plugin_optionname, '');
 				wp_redirect(admin_url('admin.php?page=ilrc_panel&tab=Import_Export'));
 				exit;
 
 			}
 
-			if (isset($_POST['ilrc_upload_backup']) && check_admin_referer('ilrc_restore_options', 'ilrc_restore_options')) {
+			if (
+				isset($_POST['ilrc_upload_backup']) &&
+				isset($_POST['ilrc_upload_nonce']) &&
+				wp_verify_nonce(esc_attr($_POST['ilrc_upload_nonce']), 'ilrc_upload_options' )
+			) {
 
 				if ($_FILES["ilrc_upload_file"]["error"] <= 0) {
 
@@ -454,7 +472,6 @@ if( !class_exists( 'ilrc_panel' ) ) {
 			if ( $this->ilrc_request('ilrc_save_settings_action') !== null ) {
 
 				if (
-					!current_user_can('manage_options') ||
 					!isset($_POST['ilrc_save_nonces']) ||
 					!wp_verify_nonce(esc_attr($_POST['ilrc_save_nonces']), 'ilrc_save_options' )
 				) {
@@ -712,8 +729,15 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 											echo $ilrcForm->textarea(FALSE, FALSE, 'widefat code', serialize($this->get_options()), TRUE);
 
-											$exportURL = esc_url('?page=ilrc_panel&tab=Import_Export&action=ilrc_backup_download');
-											echo $ilrcForm->link($exportURL, FALSE, 'button button-secondary', '_self', FALSE, esc_html__( 'Download current plugin settings','internal-linking-of-related-contents') );
+											$exportURL = add_query_arg([
+												'page'   => 'ilrc_panel',
+												'tab'    => 'Import_Export',
+												'action' => 'ilrc_export_action',
+											], admin_url('admin.php'));
+
+											$exportNonce = wp_nonce_url($exportURL, 'ilrc_export_options', 'ilrc_export_nonce');
+
+											echo $ilrcForm->link($exportNonce, FALSE, 'button button-secondary', '_self', FALSE, esc_html__( 'Download current plugin settings','internal-linking-of-related-contents') );
 
 										echo $ilrcForm->elementEnd('div');
 
@@ -731,8 +755,17 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 										echo $ilrcForm->elementStart('div', FALSE, 'input-right' );
 
-											$resetURL = esc_url('?page=ilrc_panel&tab=Import_Export&action=ilrc_backup_reset');
-											echo $ilrcForm->link($resetURL, FALSE, 'button-secondary ilrc_restore_settings', '_self', FALSE, esc_html__( 'Reset plugin settings','internal-linking-of-related-contents') );
+											$resetURL = add_query_arg([
+												'page'   => 'ilrc_panel',
+												'tab'    => 'Import_Export',
+												'action' => 'ilrc_backup_reset',
+											], admin_url('admin.php'));
+
+											$resetNonce = wp_nonce_url($resetURL, 'ilrc_reset_options', 'ilrc_reset_nonce');
+
+											echo $ilrcForm->link($resetNonce, FALSE, 'button-secondary ilrc_restore_settings', '_self', FALSE, 
+
+											esc_html__( 'Reset plugin settings','internal-linking-of-related-contents') );
 
 											echo $ilrcForm->element('p', FALSE, FALSE, esc_html__( 'If you click the button above, the plugin options return to its default values','internal-linking-of-related-contents'));
 
@@ -754,7 +787,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 											echo $ilrcForm->input('ilrc_upload_file', FALSE, FALSE, 'file', FALSE);
 											echo $ilrcForm->input('ilrc_upload_backup', 'ilrc_upload_backup', 'button-primary', 'submit', esc_html__( 'Import plugin settings','internal-linking-of-related-contents'));
-											function_exists('wp_nonce_field') ? wp_nonce_field('ilrc_restore_options', 'ilrc_restore_options') : '' ;
+											echo $ilrcForm->input('ilrc_upload_nonce', FALSE, FALSE, 'hidden', esc_attr(wp_create_nonce( 'ilrc_upload_options' )));
 
 										echo $ilrcForm->elementEnd('div');
 
