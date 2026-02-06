@@ -285,6 +285,10 @@ if( !class_exists( 'ilrc_content' ) ) {
 
 			global $post;
 
+			if ( !$post instanceof WP_Post ) {
+				return $content;
+			}
+
 			$postsArray = $this->getRelatedContents($post->ID);
 
 			if ( count($postsArray) > 0 ) {

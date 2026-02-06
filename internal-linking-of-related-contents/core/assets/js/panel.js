@@ -11,7 +11,7 @@ jQuery.noConflict()(function($){
 		var $template = $('#ilrc_template');
 		var $template_val = $template.val();
 
-		var template_array = ['template-4','template-5','template-6','template-7','template-8','template-9','template-10'];
+		var template_array = ['template-4','template-5','template-6','template-7','template-8','template-9','template-10','template-14'];
 		
 		if(jQuery.inArray($template_val, template_array) != -1) {
 			$('#ilrc_save_settings').attr('disabled', true);
@@ -70,7 +70,7 @@ jQuery.noConflict()(function($){
 	$('#ilrc_save_settings').on("click", function(){
 
 		var template = $('#ilrc_template').val();
-		var template_array = ['template-4','template-5','template-6','template-7','template-8','template-9','template-10'];
+		var template_array = ['template-4','template-5','template-6','template-7','template-8','template-9','template-10','template-14'];
 
 		if(jQuery.inArray(template, template_array) != -1) {
 

@@ -533,6 +533,7 @@ div#Slideshow .ilrc_panel_container .ilrc_panel_box .button.upload_button {
 #ilrc_template option[value="template-7"],
 #ilrc_template option[value="template-8"],
 #ilrc_template option[value="template-9"],
-#ilrc_template option[value="template-10"] {
+#ilrc_template option[value="template-10"],
+#ilrc_template option[value="template-14"] {
   color: #888;
 }

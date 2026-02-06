@@ -398,10 +398,6 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 			global $ilrc_message;
 
-			if (!current_user_can('manage_options')) {
-				exit;
-			}
-
 			$ilrc_setting = get_option($this->plugin_optionname);
 
 			if ( $ilrc_setting != false ) :
@@ -415,6 +411,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 			endif;
 
 			if (
+				current_user_can('manage_options') &&
 				isset($_GET['action']) &&
 				($_GET['action'] == 'ilrc_export_action') &&
 				isset($_GET['ilrc_export_nonce']) &&
@@ -431,6 +428,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 			}
 
 			if (
+				current_user_can('manage_options') &&
 				isset($_GET['action']) &&
 				($_GET['action'] == 'ilrc_backup_reset') &&
 				isset($_GET['ilrc_reset_nonce']) &&
@@ -444,6 +442,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 			}
 
 			if (
+				current_user_can('manage_options') &&
 				isset($_POST['ilrc_upload_backup']) &&
 				isset($_POST['ilrc_upload_nonce']) &&
 				wp_verify_nonce(esc_attr($_POST['ilrc_upload_nonce']), 'ilrc_upload_options' )
@@ -472,6 +471,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 			if ( $this->ilrc_request('ilrc_save_settings_action') !== null ) {
 
 				if (
+					!current_user_can('manage_options') ||
 					!isset($_POST['ilrc_save_nonces']) ||
 					!wp_verify_nonce(esc_attr($_POST['ilrc_save_nonces']), 'ilrc_save_options' )
 				) {
@@ -1083,7 +1083,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('13', 'internal-linking-of-related-contents');
+												echo esc_html__('14', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
@@ -1980,6 +1980,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 										echo $ilrcForm->tableElementStart('tr', FALSE, 'upsell-row');
 
 											echo $ilrcForm->tableElement('td', FALSE, FALSE);
+
 											echo $ilrcForm->tableElement('td', FALSE, FALSE);
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');

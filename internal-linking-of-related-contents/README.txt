@@ -4,9 +4,9 @@ Contributors: alexvtn
 Donate link: https://www.themeinprogress.com
 Tags: related posts, inline related posts, similar posts, contextual posts, internal linking
 Requires at least: 3.5.0
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 5.6
-Stable tag: 1.1.9
+Stable tag: 1.2.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -105,8 +105,26 @@ Install Internal Linking of Related Contents will add a new admin page, where yo
 11. Template 11
 12. Template 12
 13. Template 13
+13. Template 14 (Premium)
 
 == Changelog ==
+
+= 1.2.2 =
+Release date - December, 26 - 2025
+
+* Edit : Code optimized
+* Tested with WordPress 6.9
+
+= 1.2.1 =
+Release date - November, 26 - 2025
+
+* Fixed : PHP warning "Attempt to read property 'ID' on null" in core/includes/class-related-contents.php on line 288.
+
+= 1.2.0 =
+Release date - October, 10 - 2025
+
+* Fixed : Backend access issue for non-administrator users.
+* Edit : Code optimized
 
 = 1.1.9 =
 Release date - June, 07 - 2025

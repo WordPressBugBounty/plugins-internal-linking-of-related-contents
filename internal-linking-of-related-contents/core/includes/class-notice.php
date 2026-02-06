@@ -14,7 +14,10 @@ if( !class_exists( 'ilrc_admin_notice' ) ) {
 		 
 		public function __construct( $fields = array() ) {
 
-			if ( !get_user_meta( get_current_user_id(), 'ilrc_notice_userid_' . get_current_user_id() , TRUE ) ) {
+			if ( 
+				current_user_can('manage_options') &&
+				!get_user_meta( get_current_user_id(), 'ilrc_notice_userid_' . get_current_user_id() , TRUE )
+			) {
 
 				add_action( 'admin_notices', array(&$this, 'admin_notice') );
 				add_action( 'admin_head', array( $this, 'dismiss' ) );
