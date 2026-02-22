@@ -50,6 +50,10 @@ $optpanel = array (
 								'template-12' => esc_html__( 'Template 12','internal-linking-of-related-contents'),
 								'template-13' => esc_html__( 'Template 13','internal-linking-of-related-contents'),
 								'template-14' => esc_html__( 'Template 14 (PRO)','internal-linking-of-related-contents'),
+								'template-15' => esc_html__( 'Template 15 (PRO)','internal-linking-of-related-contents'),
+								'template-16' => esc_html__( 'Template 16 (PRO)','internal-linking-of-related-contents'),
+								'template-17' => esc_html__( 'Template 17 (PRO)','internal-linking-of-related-contents'),
+								'template-18' => esc_html__( 'Template 18','internal-linking-of-related-contents'),
 							),
 							'std' => 'template-2'
 						),

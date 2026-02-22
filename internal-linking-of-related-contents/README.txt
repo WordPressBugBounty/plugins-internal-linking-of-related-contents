@@ -6,7 +6,7 @@ Tags: related posts, inline related posts, similar posts, contextual posts, inte
 Requires at least: 3.5.0
 Tested up to: 6.9
 Requires PHP: 5.6
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -29,7 +29,7 @@ With our plugin, you can insert inline similar posts within your WordPress artic
 > In addition to inline related posts, you can also group all related articles in one place within your content. This innovative feature streamlines navigation and provides your readers with quick access to all pertinent articles, further enhancing your website's user experience.<br><br>
 
 > <strong>Featured image</strong><br>
-> Select one of seven available premium template to present the featured image alongside the related articles.<br><br>
+> Select one of 11 available premium template to present the featured image alongside the related articles.<br><br>
 
 > <strong>Order by option</strong><br>
 > Select how to order the related contents.<br><br>
@@ -105,9 +105,19 @@ Install Internal Linking of Related Contents will add a new admin page, where yo
 11. Template 11
 12. Template 12
 13. Template 13
-13. Template 14 (Premium)
+14. Template 14 (Premium)
+15. Template 15 (Premium)
+16. Template 16 (Premium)
+17. Template 17 (Premium)
+18. Template 18
 
 == Changelog ==
+
+= 1.2.3 =
+Release date - February, 22 - 2026
+
+* Added : Metabox option on each post/page to exclude the related posts.
+* Added : New template (template 18)
 
 = 1.2.2 =
 Release date - December, 26 - 2025

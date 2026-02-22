@@ -250,10 +250,20 @@ if( !class_exists( 'ilrc_content' ) ) {
 
 			}
 
-			$return = get_posts(array_merge($args, $engineSearchArgs));
-			array_splice($return, array_search($postID, $return ), 1);
+			if (
+				get_post_meta($postID, 'ilrc_exclude_related_posts', true) === '1'
+			) :
 
-			return $return;
+				return array();
+
+			else:
+
+				$return = get_posts(array_merge($args, $engineSearchArgs));
+				array_splice($return, array_search($postID, $return ), 1);
+
+				return $return;
+
+			endif;
 
 		}
 

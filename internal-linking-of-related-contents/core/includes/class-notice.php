@@ -60,23 +60,24 @@ if( !class_exists( 'ilrc_admin_notice' ) ) {
 
 					<p class="notice-coupon-message">
 
-						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( '7 additional premium templates', 'internal-linking-of-related-contents' ); ?><br/>
+						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( '11 additional premium templates', 'internal-linking-of-related-contents' ); ?><br/>
 						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( 'Grouped related posts', 'internal-linking-of-related-contents' ); ?><br/>
 						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( 'Related content based of category and post tags', 'internal-linking-of-related-contents' ); ?><br/>
 						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( 'Related content based of post titles or custom keywords', 'internal-linking-of-related-contents' ); ?><br/>
 						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( 'Device selection', 'internal-linking-of-related-contents' ); ?><br/>
 						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( 'Custom post type support', 'internal-linking-of-related-contents' ); ?><br/>
+						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( 'Gutenberg block', 'internal-linking-of-related-contents' ); ?><br/>
 						<span class="dashicon dashicons dashicons-yes-alt" size="10"></span><?php esc_html_e( 'AMP support', 'internal-linking-of-related-contents' ); ?><br/>
 
 					</p>
 
 					<a class="button" href="<?php echo esc_url(admin_url( 'admin.php?page=ilrc_panel&tab=free_vs_pro#free_vs_pro' )); ?>" ><?php esc_html_e( 'Free vs Pro', 'internal-linking-of-related-contents' ); ?></a>
 
-					<a class="button" target="_blank" href="<?php echo esc_url( ILRC_UPGRADE_LINK . '/?ref=2&campaign=ilrc-notice' ); ?>"><?php _e( 'Upgrade Now', 'internal-linking-of-related-contents' ); ?></a>
+					<a class="button" target="_blank" href="<?php echo esc_url( ILRC_UPGRADE_LINK . '/?ref=2&campaign=ilrc-notice' ); ?>"><?php esc_html_e( 'Upgrade Now', 'internal-linking-of-related-contents' ); ?></a>
 					
 					<div class="clear"></div>
 
-					<?php printf( '<a href="%1$s" class="dismiss-notice">'. __( 'Dismiss this notice', 'internal-linking-of-related-contents' ) .'</a>', esc_url($redirect) ); ?>
+					<?php printf( '<a href="%1$s" class="dismiss-notice">'. esc_html__( 'Dismiss this notice', 'internal-linking-of-related-contents' ) .'</a>', esc_url($redirect) ); ?>
 
 				</div>
 

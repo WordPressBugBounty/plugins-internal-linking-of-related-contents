@@ -1,0 +1,45 @@
+.ilrc_metabox_container {
+	font-size:14px;
+	line-height:1.4em;
+    padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+	position:relative;
+}
+
+.ilrc_metabox_container:last-of-type {
+	border-bottom: none;
+}
+
+.ilrc_metabox_container .input-left label {
+    display: block;
+}
+
+.ilrc_metabox_container .input-right strong ,
+.ilrc_metabox_container .input-right span.ilrc_metabox_description {
+    display: block;
+}
+
+.ilrc_metabox_container .input-right strong {
+    margin-bottom: 15px;
+}
+
+.ilrc_metabox_container .input-right span.ilrc_metabox_description {
+    margin-top: 15px;
+}
+
+.ilrc_metabox_container .input-left label {
+    font-weight: bold;
+}
+
+.ilrc_metabox_container .input-left {
+	float:left;
+	width:28%;
+	vertical-align:top;
+	padding:14px 0 0 0;
+}
+
+.ilrc_metabox_container .input-right {
+	float:right;
+	width:70%;
+	padding:14px 0 0 0;
+}

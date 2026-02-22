@@ -11,7 +11,7 @@ jQuery.noConflict()(function($){
 		var $template = $('#ilrc_template');
 		var $template_val = $template.val();
 
-		var template_array = ['template-4','template-5','template-6','template-7','template-8','template-9','template-10','template-14'];
+		var template_array = ['template-4','template-5','template-6','template-7','template-8','template-9','template-10','template-14','template-15','template-16','template-17'];
 		
 		if(jQuery.inArray($template_val, template_array) != -1) {
 			$('#ilrc_save_settings').attr('disabled', true);
@@ -70,13 +70,24 @@ jQuery.noConflict()(function($){
 	$('#ilrc_save_settings').on("click", function(){
 
 		var template = $('#ilrc_template').val();
-		var template_array = ['template-4','template-5','template-6','template-7','template-8','template-9','template-10','template-14'];
+		var text_color = ($('#ilrc_textcolor').val() || '').toLowerCase();
+		var text_color_hover = ($('#ilrc_textcolorhover').val() || '').toLowerCase();
+
+		var template_array = ['template-4','template-5','template-6','template-7','template-8','template-9','template-10','template-14','template-15','template-16','template-17'];
 
 		if(jQuery.inArray(template, template_array) != -1) {
-
 			window.alert("The selected layout is not available on the free version.");
 			return false;
+		}
 
+		if( template === 'template-18' && text_color.indexOf('#fff') === 0) {
+			window.alert("Please select a darker color for the text if you are using template 18.");
+			return false;
+		}
+
+		if( template === 'template-18' && text_color_hover.indexOf('#fff') === 0) {
+			window.alert("Please select a darker color for the text on hover if you are using template 18.");
+			return false;
 		}
 
 	});

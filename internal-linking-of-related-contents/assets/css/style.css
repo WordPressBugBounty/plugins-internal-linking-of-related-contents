@@ -310,3 +310,86 @@
 	color:#e74c3c !important;
 	background: none !important;
 }
+
+/* Template 18
+   ---- */
+
+.internal-linking-related-contents .template-18 {
+	background: #fff;
+	border: 1px solid #dee2e6;
+	width: 100%;
+	text-align: left;
+	position: relative;
+}
+
+.internal-linking-related-contents .template-18-inner {
+	padding: 20px;
+}
+
+.internal-linking-related-contents .template-18 .template-18-header {
+	border-bottom: 2px solid #ec7063;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+.internal-linking-related-contents .template-18 .template-18-category {
+	background: #ec7063;
+	color: #fff;
+	padding: 4px 10px;
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-right: 5px;
+	-webkit-transition: background-color .3s ease;
+	-moz-transition: background-color .3s ease;
+	-o-transition: background-color .3s ease;
+	transition: background-color .3s ease;
+}
+
+.internal-linking-related-contents .template-18 .template-18-category:hover ,
+.internal-linking-related-contents .template-18 .template-18-category:active ,
+.internal-linking-related-contents .template-18 .template-18-category:focus {
+	background:#e74c3c;
+}
+
+.internal-linking-related-contents .template-18 .template-18-title {
+	text-align: left;
+	margin: 0 0 8px 0 !important;
+}
+
+.internal-linking-related-contents .template-18 .template-18-title a {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	color: #333333;
+	-webkit-transition: color .3s ease, color .3s ease;
+	-moz-transition: color .3s ease, color .3s ease;
+	-o-transition: color .3s ease, color .3s ease;
+	transition: color .3s ease, color .3s ease;
+}
+
+.internal-linking-related-contents .template-18 .template-18-title a:hover,
+.internal-linking-related-contents .template-18 .template-18-title a:active,
+.internal-linking-related-contents .template-18 .template-18-title a:focus {
+	color: #ec7063;
+}
+
+.internal-linking-related-contents .template-18 .template-18-excerpt {
+	font-size: 14px;
+	color: #333333;
+	line-height: 1.5;
+	margin: 0 0 10px 0;
+}
+
+.internal-linking-related-contents .template-18 .template-18-meta {
+	font-size: 12px;
+	color: #818181;
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.internal-linking-related-contents .template-18 .template-18-meta span {
+	margin-right: 0;
+}

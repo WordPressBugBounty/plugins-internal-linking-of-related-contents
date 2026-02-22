@@ -124,6 +124,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 				'template-11',
 				'template-12',
 				'template-13',
+				'template-18',
 			);
 
 			if ( in_array($k, $allowedOptions)) {
@@ -1077,13 +1078,13 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('6', 'internal-linking-of-related-contents');
+												echo esc_html__('7', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('14', 'internal-linking-of-related-contents');
+												echo esc_html__('18', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 

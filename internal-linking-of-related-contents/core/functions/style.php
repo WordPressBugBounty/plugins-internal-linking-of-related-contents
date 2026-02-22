@@ -27,8 +27,12 @@ if (!function_exists('ilrc_css_custom')) {
 				.internal-linking-related-contents .template-2,
 				.internal-linking-related-contents .template-3,
 				.internal-linking-related-contents a.template-11,
-				.internal-linking-related-contents a.template-12 { background-color:' . esc_html(ilrc_setting('ilrc_backgroundcolor')) . '!important}';
-			
+				.internal-linking-related-contents a.template-12,
+				.internal-linking-related-contents .template-18 .template-18-category { background-color:' . esc_html(ilrc_setting('ilrc_backgroundcolor')) . '!important}';
+
+			$css .= '
+				.internal-linking-related-contents .template-18 .template-18-header { border-color:' . esc_html(ilrc_setting('ilrc_backgroundcolor')) . '}';
+
 		endif;
 		
 		if ( ilrc_setting('ilrc_backgroundcolorhover') ) :
@@ -50,7 +54,10 @@ if (!function_exists('ilrc_css_custom')) {
 				.internal-linking-related-contents a.template-11:focus,
 				.internal-linking-related-contents a.template-12:hover,
 				.internal-linking-related-contents a.template-12:active,
-				.internal-linking-related-contents a.template-12:focus { background-color:' . esc_html(ilrc_setting('ilrc_backgroundcolorhover')) . '!important}';
+				.internal-linking-related-contents a.template-12:focus,
+				.internal-linking-related-contents .template-18 .template-18-category:hover ,
+				.internal-linking-related-contents .template-18 .template-18-category:active ,
+				.internal-linking-related-contents .template-18 .template-18-category:focus { background-color:' . esc_html(ilrc_setting('ilrc_backgroundcolorhover')) . '!important}';
 
 		endif;
 				
@@ -62,8 +69,10 @@ if (!function_exists('ilrc_css_custom')) {
 				.internal-linking-related-contents .template-3 span.cta,
 				.internal-linking-related-contents a.template-11 ,
 				.internal-linking-related-contents a.template-12 ,
-				.internal-linking-related-contents a.template-13 { color:' . esc_html(ilrc_setting('ilrc_textcolor')) . '}';
-			
+				.internal-linking-related-contents a.template-13 ,
+				.internal-linking-related-contents .template-18 .template-18-title a ,
+				.internal-linking-related-contents .template-18 .template-18-excerpt { color:' . esc_html(ilrc_setting('ilrc_textcolor')) . '}';
+
 		endif;
 
 		if ( ilrc_setting('ilrc_textcolorhover') ) :
@@ -74,7 +83,10 @@ if (!function_exists('ilrc_css_custom')) {
 				.internal-linking-related-contents .template-3:hover span.cta,
 				.internal-linking-related-contents a.template-11:hover ,
 				.internal-linking-related-contents a.template-12:hover ,
-				.internal-linking-related-contents a.template-13:hover { color:' . esc_html(ilrc_setting('ilrc_textcolorhover')) . '!important}';
+				.internal-linking-related-contents a.template-13:hover ,
+				.internal-linking-related-contents .template-18 .template-18-title a:hover ,
+				.internal-linking-related-contents .template-18 .template-18-title a:active ,
+				.internal-linking-related-contents .template-18 .template-18-title a:focus { color:' . esc_html(ilrc_setting('ilrc_textcolorhover')) . '!important}';
 		endif;
 
 		if ( ilrc_setting('ilrc_ctatextcolor') ) :
