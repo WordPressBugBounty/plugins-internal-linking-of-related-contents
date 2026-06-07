@@ -4,14 +4,14 @@
 Plugin Name: Internal Linking of Related Contents
 Plugin URI: https://www.themeinprogress.com/internal-linking-related-contents-pro/
 Description: Internal Linking of Related Contents allows you to automatically insert inline related posts within your WordPress articles.
-Version: 1.2.3
+Version: 1.2.4
 Text Domain: internal-linking-of-related-contents
 Author: ThemeinProgress
 Author URI: https://www.themeinprogress.com
 License: GPL3
 Domain Path: /languages/
 
-Copyright 2025  ThemeinProgress  (email : support@wpinprogress.com)
+Copyright 2026  ThemeinProgress  (email : support@wpinprogress.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 define( 'ILRC_NAME', 'Internal Linking Related Contents' );
-define( 'ILRC_VERSION', '1.2.3' );
+define( 'ILRC_VERSION', '1.2.4' );
 define( 'ILRC_PLUGIN_FOLDER', plugins_url(false, __FILE__ ) );
 define( 'ILRC_ITEM_SLUG', 'ilrc');
 define( 'ILRC_UPGRADE_LINK', 'https://www.themeinprogress.com/internal-linking-of-related-contents-pro/' );

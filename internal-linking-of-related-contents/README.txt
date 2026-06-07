@@ -4,9 +4,9 @@ Contributors: alexvtn
 Donate link: https://www.themeinprogress.com
 Tags: related posts, inline related posts, similar posts, contextual posts, internal linking
 Requires at least: 3.5.0
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 5.6
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -112,6 +112,12 @@ Install Internal Linking of Related Contents will add a new admin page, where yo
 18. Template 18
 
 == Changelog ==
+
+= 1.2.4 =
+Release date - June, 07 - 2026
+
+* Edit : Code optimized
+* Tested with WordPress 7.0
 
 = 1.2.3 =
 Release date - February, 22 - 2026
