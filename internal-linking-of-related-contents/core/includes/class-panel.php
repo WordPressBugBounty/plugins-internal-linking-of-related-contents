@@ -1221,6 +1221,48 @@ if( !class_exists( 'ilrc_panel' ) ) {
 											echo $ilrcForm->tableElementEnd('td');
 
 										echo $ilrcForm->tableElementEnd('tr');
+										
+										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'large');
+
+												echo $ilrcForm->elementStart('div', FALSE, 'feature-wrap' );
+
+													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
+
+														echo esc_html__('Related posts based on AI content analysis', 'internal-linking-of-related-contents');
+
+													echo $ilrcForm->elementEnd('h4');
+
+													echo $ilrcForm->elementStart('div', FALSE, 'feature-inline-row' );
+
+														echo $ilrcForm->element('span', FALSE, 'info-icon dashicon dashicons dashicons-info', FALSE );
+
+														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
+
+															echo esc_html__('Using OpenAI or Ollama models, AI Engine can identify more relevant related posts by analyzing the meaning and context of your content.', 'internal-linking-of-related-contents');
+
+														echo $ilrcForm->elementEnd('span');
+
+													echo $ilrcForm->elementEnd('div');
+
+												echo $ilrcForm->elementEnd('div');
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-no-alt', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-yes', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+										echo $ilrcForm->tableElementEnd('tr');
 
 										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
 

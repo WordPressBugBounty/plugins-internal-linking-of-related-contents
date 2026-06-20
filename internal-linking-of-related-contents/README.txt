@@ -6,7 +6,7 @@ Tags: related posts, inline related posts, similar posts, contextual posts, inte
 Requires at least: 3.5.0
 Tested up to: 7.0
 Requires PHP: 5.6
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,6 +24,9 @@ With our plugin, you can insert inline similar posts within your WordPress artic
 [youtube https://www.youtube.com/watch?v=fvc2qKm2n58]
 
 **Premium features.**
+
+> <strong>AI-powered related posts</strong><br>
+> Display inline related posts based on content meaning and context, with support for OpenAI and local Ollama models.<br><br>
 
 > <strong>Group related posts into a specific location</strong><br>
 > In addition to inline related posts, you can also group all related articles in one place within your content. This innovative feature streamlines navigation and provides your readers with quick access to all pertinent articles, further enhancing your website's user experience.<br><br>
@@ -112,6 +115,11 @@ Install Internal Linking of Related Contents will add a new admin page, where yo
 18. Template 18
 
 == Changelog ==
+
+= 1.2.5 =
+Release date - June, 20 - 2026
+
+* Edit : Code optimized
 
 = 1.2.4 =
 Release date - June, 07 - 2026
