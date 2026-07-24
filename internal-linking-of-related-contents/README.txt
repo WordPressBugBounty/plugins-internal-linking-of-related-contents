@@ -6,7 +6,7 @@ Tags: related posts, inline related posts, similar posts, contextual posts, inte
 Requires at least: 3.5.0
 Tested up to: 7.0
 Requires PHP: 5.6
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -21,7 +21,7 @@ Internal Linking is a powerful SEO technique and an important tool to increase y
 With our plugin, you can insert inline similar posts within your WordPress articles, rather than at the end of the post content, like the most popular plugins.
 
 <strong>Plugin overview</strong><br><br>
-[youtube https://www.youtube.com/watch?v=fvc2qKm2n58]
+[youtube https://www.youtube.com/watch?v=Pf4ZBjH584M]
 
 **Premium features.**
 
@@ -31,8 +31,20 @@ With our plugin, you can insert inline similar posts within your WordPress artic
 > <strong>Group related posts into a specific location</strong><br>
 > In addition to inline related posts, you can also group all related articles in one place within your content. This innovative feature streamlines navigation and provides your readers with quick access to all pertinent articles, further enhancing your website's user experience.<br><br>
 
-> <strong>Featured image</strong><br>
-> Select one of 11 available premium template to present the featured image alongside the related articles.<br><br>
+> <strong>Premium templates</strong><br>
+> 12 additional premium templates with advanced layouts and styles to create more engaging related content sections.<br><br>
+
+> <strong>Placeholder image</strong><br>
+> Display a custom placeholder image when a related post does not have a featured image.<br><br>
+
+> <strong>Custom featured image</strong><br>
+> Choose a custom image for manually selected related posts added through the shortcode, Gutenberg block, or Elementor widget.<br><br>
+
+> <strong>Hide posts without the featured image</strong><br>
+> Automatically hide related posts that do not have a featured image.<br><br>
+
+> <strong>Custom featured image size</strong><br>
+> Set a custom width and height for featured images displayed in related content.<br><br>
 
 > <strong>Order by option</strong><br>
 > Select how to order the related contents.<br><br>
@@ -73,8 +85,11 @@ With our plugin, you can insert inline similar posts within your WordPress artic
 > <strong>WordPress pages support</strong><br>
 > You can enable the related contents within pages (linking child pages or based on custom keywords)<br><br>
 
-> <strong>Gutenberg block</strong><br>
-> Use the Gutenberg block to effortlessly incorporate specific related posts within your WordPress content.<br><br>
+> <strong>Gutenberg blocks</strong><br>
+> Display a selected related post using the plugin settings, or customize its template and display options directly in the Gutenberg editor.<br><br>
+
+> <strong>Elementor widgets</strong><br>
+> Display a selected related post using the plugin settings, or customize its template and display options directly in Elementor.<br><br>
 
 You can get the premium version, from the following link:
 [https://www.themeinprogress.com/internal-linking-of-related-contents-pro/](https://www.themeinprogress.com/internal-linking-of-related-contents-pro/)
@@ -98,7 +113,7 @@ Install Internal Linking of Related Contents will add a new admin page, where yo
 1. Template 1
 2. Template 2
 3. Template 3
-4. Template 4 (Premium)
+4. Template 4 
 5. Template 5 (Premium)
 6. Template 6 (Premium)
 7. Template 7 (Premium)
@@ -113,8 +128,18 @@ Install Internal Linking of Related Contents will add a new admin page, where yo
 16. Template 16 (Premium)
 17. Template 17 (Premium)
 18. Template 18
+19. Template 19 (Premium)
 
 == Changelog ==
+
+= 1.2.6 =
+Release date - July, 24 - 2026
+
+* Removed : Upsell link from the plugin settings tabs
+* Removed : Upsell notice from the WordPress admin
+* Added : New template (template 4)
+* Added : Upsell section directly within plugin settings
+* Improved : Code optimization
 
 = 1.2.5 =
 Release date - June, 20 - 2026

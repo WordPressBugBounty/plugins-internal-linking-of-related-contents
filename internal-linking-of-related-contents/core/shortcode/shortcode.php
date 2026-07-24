@@ -15,16 +15,23 @@ if (!function_exists('ilrc_function')) {
 		), $atts));
 
 			$output = '';
+			$featuredImage = '';
 
 			$relatedPost = get_post($postid);
-			
+
+			if ( has_post_thumbnail($postid)) {
+				$imageURL = get_the_post_thumbnail_url($postid, 'ilrc-thumbnail');
+				$featuredImage = '<img class="wp-post-image alignleft" src="'. esc_url($imageURL) . '"/>' ;
+			}
+
 			$title = ($posttitle) ? $posttitle : $relatedPost->post_title;
 			$links = ($url) ? $url : get_permalink($postid);
 			
 			$target = ($target == '_blank') ? 'target="_blank" ' : '';
 			$rel = ($rel == 'nofollow') ? 'rel="nofollow" ' : '';
 
-			$templateArray = array('template-1','template-2','template-3','template-11','template-12','template-13','template-18');
+			$templateArray = array('template-1','template-2','template-3','template-4','template-11','template-12','template-13','template-18');
+
 			$getTemplate = (isset($template) && in_array($template,$templateArray) ) ? $template : 'template-2';
 
 			switch ($getTemplate) {
@@ -35,14 +42,48 @@ if (!function_exists('ilrc_function')) {
 				default:
 
 					$output .= '<div class="internal-linking-related-contents">';
-					$output .= '<a ' . $target . $rel . ' href="' . esc_url($links) . '" class="' . esc_attr($getTemplate) . '">';
-					$output .= '<span class="cta">';
-					$output .= esc_html($cta);
-					$output .= '</span>';
-					$output .= '<span class="postTitle">';
-					$output .= esc_html($title);
-					$output .= '</span>';
-					$output .= '</a>';
+
+						$output .= '<a ' . $target . $rel . ' href="' . esc_url($links) . '" class="' . esc_attr($getTemplate) . '">';
+
+							$output .= '<span class="cta">';
+
+								$output .= esc_html($cta);
+
+							$output .= '</span>';
+
+							$output .= '<span class="postTitle">';
+
+								$output .= esc_html($title);
+
+							$output .= '</span>';
+
+						$output .= '</a>';
+
+					$output .= '</div>';
+
+				break;
+
+				case 'template-4':
+
+					$output .= '<div class="internal-linking-related-contents">';
+
+						$output .= '<a ' . $target . $rel . ' href="' . esc_url($links) . '" class="' . esc_attr($getTemplate) . '">';
+
+							$output .= $featuredImage;
+
+							$output .= '<div class="postTitle">';
+
+								$output .= '<span>';
+			
+									$output .= '<strong>' . esc_html($cta) . '</strong>';
+									$output .= esc_html($title);
+
+								$output .= '</span>';
+							
+							$output .= '</div>';
+
+						$output .= '</a>';
+
 					$output .= '</div>';
 
 				break;

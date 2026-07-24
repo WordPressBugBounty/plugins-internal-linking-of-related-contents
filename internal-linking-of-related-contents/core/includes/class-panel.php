@@ -43,7 +43,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 					'manage_options',
 					'tip_plugins_panel',
 					NULL,
-					plugins_url('/assets/images/tip-icon.png', dirname(__FILE__)),
+					plugins_url('/assets/images/tip-icon.svg', dirname(__FILE__)),
 					64
 				);
 
@@ -72,13 +72,13 @@ if( !class_exists( 'ilrc_panel' ) ) {
 			 global $wp_version, $pagenow;
 
 			 $file_dir = plugins_url('/assets/', dirname(__FILE__));
-			 wp_enqueue_style ( 'ilrc_notice', $file_dir.'css/notice.css' );
 
 			 if ( $pagenow == 'admin.php' ) {
 
 				wp_enqueue_style ( 'wp-color-picker' );
 
 				wp_enqueue_style ( 'ilrc_panel', $file_dir.'css/panel.css' );
+				wp_enqueue_style ( 'ilrc_upsell', $file_dir.'css/upsell.css' );
 				wp_enqueue_style ( 'ilrc_free_pro_table', $file_dir.'css/free_pro_table.css' );
 				wp_enqueue_style ( 'ilrc_panel_googlefonts', '//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i');
 
@@ -121,6 +121,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 				'template-1',
 				'template-2',
 				'template-3',
+				'template-4',
 				'template-11',
 				'template-12',
 				'template-13',
@@ -342,6 +343,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 				case 'ilrc_backgroundcolorhover':
 				case 'ilrc_textcolor':
 				case 'ilrc_textcolorhover':
+				case 'ilrc_containertextcolor':
 				case 'ilrc_ctatextcolor':
 
 					$tosave = sanitize_hex_color($value);
@@ -632,6 +634,136 @@ if( !class_exists( 'ilrc_panel' ) ) {
 								case 'end-container':
 
 										echo $ilrcForm->elementEnd('div');
+
+									echo $ilrcForm->elementEnd('div');
+
+								break;
+
+								case 'upsell':
+
+									echo $ilrcForm->elementStart('div', FALSE, 'notice ilrc-upsell');
+
+										echo $ilrcForm->elementStart('div', FALSE, 'ilrc-upsell-inner');
+
+											echo $ilrcForm->element('h3', FALSE, FALSE, __( 'Need more features?', 'internal-linking-of-related-contents' ) );
+
+											echo $ilrcForm->element('strong', FALSE, FALSE, __( 'Upgrade to Internal Linking of Related Contents Pro to unlock premium features like...', 'internal-linking-of-related-contents' ) );
+
+											echo $ilrcForm->elementStart('p', FALSE, 'notice-coupon-message');
+
+												echo $ilrcForm->elementStart('ul', FALSE, 'ilrc-upsell-features-list');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( '12 additional premium templates', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'Grouped related posts', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'Related posts based on AI content analysis', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'Related content based of category and post tags, post title or custom keywords', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'Device selection', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'Custom post type support', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'Placeholder image', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'Custom featured image size', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'Hide posts without the featured image', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'Gutenberg blocks', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'Elementor widgets', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+													echo $ilrcForm->elementStart('li', FALSE, FALSE);
+
+														echo $ilrcForm->element('span', FALSE, 'ilrc-upsell-icon dashicon dashicons dashicons-yes', FALSE);
+														echo esc_html__( 'AMP support', 'internal-linking-of-related-contents' );
+
+													echo $ilrcForm->elementEnd('li');
+
+												echo $ilrcForm->elementEnd('ul');
+
+											echo $ilrcForm->elementEnd('p');
+
+											echo $ilrcForm->link(
+												admin_url( 'admin.php?page=ilrc_panel&tab=free_vs_pro#free_vs_pro' ),
+												FALSE,
+												'ilrc-upsell-button',
+												FALSE,
+												FALSE,
+												__( 'Free vs Pro', 'internal-linking-of-related-contents' )
+											);
+
+											echo $ilrcForm->link(
+												ILRC_UPGRADE_LINK . '?ref=2&campaign=ilrc-upsell',
+												FALSE,
+												'ilrc-upsell-button',
+												'_blank',
+												FALSE,
+												__( 'Upgrade to premium', 'internal-linking-of-related-contents' )
+											);
+
+											echo $ilrcForm->element('div', FALSE, 'clear', FALSE);
+
+										echo $ilrcForm->elementEnd('div');
+
+										echo $ilrcForm->element('div', FALSE, 'clear', FALSE);
 
 									echo $ilrcForm->elementEnd('div');
 
@@ -1078,13 +1210,13 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('7', 'internal-linking-of-related-contents');
+												echo esc_html__('8', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
 											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
 
-												echo esc_html__('18', 'internal-linking-of-related-contents');
+												echo esc_html__('19', 'internal-linking-of-related-contents');
 
 											echo $ilrcForm->tableElementEnd('td');
 
@@ -1608,7 +1740,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Featured image', 'internal-linking-of-related-contents');
+														echo esc_html__('Placeholder image', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1618,7 +1750,133 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('You can display the featured image of related content, choosing one of premium available template.', 'internal-linking-of-related-contents');
+															echo esc_html__('Display a custom placeholder image when a related post does not have a featured image.', 'internal-linking-of-related-contents');
+
+														echo $ilrcForm->elementEnd('span');
+
+													echo $ilrcForm->elementEnd('div');
+
+												echo $ilrcForm->elementEnd('div');
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-no-alt', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-yes', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+										echo $ilrcForm->tableElementEnd('tr');
+
+										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'large');
+
+												echo $ilrcForm->elementStart('div', FALSE, 'feature-wrap' );
+
+													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
+
+														echo esc_html__('Custom featured image', 'internal-linking-of-related-contents');
+
+													echo $ilrcForm->elementEnd('h4');
+
+													echo $ilrcForm->elementStart('div', FALSE, 'feature-inline-row' );
+
+														echo $ilrcForm->element('span', FALSE, 'info-icon dashicon dashicons dashicons-info', FALSE );
+
+														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
+
+															echo esc_html__('Choose a custom image for manually selected related posts added through the shortcode, Gutenberg block, or Elementor widget.', 'internal-linking-of-related-contents');
+
+														echo $ilrcForm->elementEnd('span');
+
+													echo $ilrcForm->elementEnd('div');
+
+												echo $ilrcForm->elementEnd('div');
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-no-alt', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-yes', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+										echo $ilrcForm->tableElementEnd('tr');
+
+										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'large');
+
+												echo $ilrcForm->elementStart('div', FALSE, 'feature-wrap' );
+
+													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
+
+														echo esc_html__('Hide posts without the featured image', 'internal-linking-of-related-contents');
+
+													echo $ilrcForm->elementEnd('h4');
+
+													echo $ilrcForm->elementStart('div', FALSE, 'feature-inline-row' );
+
+														echo $ilrcForm->element('span', FALSE, 'info-icon dashicon dashicons dashicons-info', FALSE );
+
+														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
+
+															echo esc_html__('Automatically hide related posts that do not have a featured image.', 'internal-linking-of-related-contents');
+
+														echo $ilrcForm->elementEnd('span');
+
+													echo $ilrcForm->elementEnd('div');
+
+												echo $ilrcForm->elementEnd('div');
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-no-alt', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-yes', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+										echo $ilrcForm->tableElementEnd('tr');
+
+										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'large');
+
+												echo $ilrcForm->elementStart('div', FALSE, 'feature-wrap' );
+
+													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
+
+														echo esc_html__('Custom featured image size', 'internal-linking-of-related-contents');
+
+													echo $ilrcForm->elementEnd('h4');
+
+													echo $ilrcForm->elementStart('div', FALSE, 'feature-inline-row' );
+
+														echo $ilrcForm->element('span', FALSE, 'info-icon dashicon dashicons dashicons-info', FALSE );
+
+														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
+
+															echo esc_html__('Set a custom width and height for featured images displayed in related content.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 
@@ -1860,7 +2118,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
 
-														echo esc_html__('Gutenberg block', 'internal-linking-of-related-contents');
+														echo esc_html__('Gutenberg blocks', 'internal-linking-of-related-contents');
 
 													echo $ilrcForm->elementEnd('h4');
 
@@ -1870,7 +2128,49 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
 
-															echo esc_html__('Starting from the version 1.0.9, you can use the Gutenberg block to add a specific related post inside the WordPress content.', 'internal-linking-of-related-contents');
+															echo esc_html__('Add a specific related post to your WordPress content using the plugin’s global settings, or build a custom version by choosing its template, call to action, and display options directly in Gutenberg.', 'internal-linking-of-related-contents');
+
+														echo $ilrcForm->elementEnd('span');
+
+													echo $ilrcForm->elementEnd('div');
+
+												echo $ilrcForm->elementEnd('div');
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-no-alt', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'indicator');
+
+												echo $ilrcForm->element('span', FALSE, 'dashicon dashicons dashicons-yes', FALSE);
+
+											echo $ilrcForm->tableElementEnd('td');
+
+										echo $ilrcForm->tableElementEnd('tr');
+
+										echo $ilrcForm->tableElementStart('tr', FALSE, 'feature-row');
+
+											echo $ilrcForm->tableElementStart('td', FALSE, 'large');
+
+												echo $ilrcForm->elementStart('div', FALSE, 'feature-wrap' );
+
+													echo $ilrcForm->elementStart('h4', FALSE, FALSE );
+
+														echo esc_html__('Elementor widgets', 'internal-linking-of-related-contents');
+
+													echo $ilrcForm->elementEnd('h4');
+
+													echo $ilrcForm->elementStart('div', FALSE, 'feature-inline-row' );
+
+														echo $ilrcForm->element('span', FALSE, 'info-icon dashicon dashicons dashicons-info', FALSE );
+
+														echo $ilrcForm->elementStart('span', FALSE, 'feature-description' );
+
+															echo esc_html__('Add a specific related post to your pages using the plugin’s global settings, or build a custom version by choosing its template, call to action, and display options directly in Elementor.', 'internal-linking-of-related-contents');
 
 														echo $ilrcForm->elementEnd('span');
 

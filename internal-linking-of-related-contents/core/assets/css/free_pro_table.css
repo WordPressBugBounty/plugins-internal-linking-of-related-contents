@@ -109,7 +109,7 @@ table.table.free-pro .upsell-row {
 table.table.free-pro .upsell-row a {
   background:#f22613;
   border: solid 1px #d91e18;
-  padding: 5px 10px;
+  padding: 0px 10px;
   height: auto;
   font-size: 15px;
 }
@@ -119,4 +119,3 @@ table.table.free-pro .upsell-row a:active ,
 table.table.free-pro .upsell-row a:focus {
   background:#d91e18;
 }
-

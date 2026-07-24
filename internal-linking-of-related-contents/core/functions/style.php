@@ -81,12 +81,22 @@ if (!function_exists('ilrc_css_custom')) {
 				.internal-linking-related-contents .template-1:hover span,
 				.internal-linking-related-contents .template-2:hover span.postTitle,
 				.internal-linking-related-contents .template-3:hover span.cta,
+				.internal-linking-related-contents .template-4:hover .postTitle,
+				.internal-linking-related-contents .template-4:hover .postTitle span ,
 				.internal-linking-related-contents a.template-11:hover ,
 				.internal-linking-related-contents a.template-12:hover ,
 				.internal-linking-related-contents a.template-13:hover ,
 				.internal-linking-related-contents .template-18 .template-18-title a:hover ,
 				.internal-linking-related-contents .template-18 .template-18-title a:active ,
 				.internal-linking-related-contents .template-18 .template-18-title a:focus { color:' . esc_html(ilrc_setting('ilrc_textcolorhover')) . '!important}';
+		endif;
+
+		if ( ilrc_setting('ilrc_containertextcolor') ) :
+
+			$css .= '
+				.internal-linking-related-contents .template-4 .postTitle ,
+				.internal-linking-related-contents .template-4 .postTitle span { color:' . esc_html(ilrc_setting('ilrc_containertextcolor')) . '}';
+			
 		endif;
 
 		if ( ilrc_setting('ilrc_ctatextcolor') ) :

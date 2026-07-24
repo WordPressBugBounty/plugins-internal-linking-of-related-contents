@@ -4,7 +4,7 @@
 Plugin Name: Internal Linking of Related Contents
 Plugin URI: https://www.themeinprogress.com/internal-linking-related-contents-pro/
 Description: Internal Linking of Related Contents allows you to automatically insert inline related posts within your WordPress articles.
-Version: 1.2.5
+Version: 1.2.6
 Text Domain: internal-linking-of-related-contents
 Author: ThemeinProgress
 Author URI: https://www.themeinprogress.com
@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 define( 'ILRC_NAME', 'Internal Linking Related Contents' );
-define( 'ILRC_VERSION', '1.2.5' );
+define( 'ILRC_VERSION', '1.2.6' );
 define( 'ILRC_PLUGIN_FOLDER', plugins_url(false, __FILE__ ) );
 define( 'ILRC_ITEM_SLUG', 'ilrc');
 define( 'ILRC_UPGRADE_LINK', 'https://www.themeinprogress.com/internal-linking-of-related-contents-pro/' );
@@ -106,7 +106,12 @@ if( !class_exists( 'ilrc_init' ) ) {
 			require_once dirname(__FILE__) . '/core/includes/class-related-contents.php';
 			require_once dirname(__FILE__) . '/core/includes/class-form.php';
 			require_once dirname(__FILE__) . '/core/includes/class-panel.php';
-			require_once dirname(__FILE__) . '/core/includes/class-notice.php';
+
+            add_image_size(
+				'ilrc-thumbnail',
+				250,
+				200
+			);
 
 		}
 

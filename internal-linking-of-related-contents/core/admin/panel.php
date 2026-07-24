@@ -13,8 +13,7 @@ $optpanel = array (
 
 				"Plugin_Settings" => esc_html__( 'Plugin settings','internal-linking-of-related-contents'),
 				"Import_Export"	=> esc_html__( 'Import/Export','internal-linking-of-related-contents'),
-				"free_vs_pro" => esc_html__( 'Free vs Pro','internal-linking-of-related-contents'),
-				ILRC_SALE_PAGE . "ilrc-panel"	=> esc_html__( 'Upgrade to Premium','internal-linking-of-related-contents'),
+				"free_vs_pro" => esc_html__( 'Free vs Pro','internal-linking-of-related-contents')
 			),
 
 			"start" => "<ul>",
@@ -23,6 +22,8 @@ $optpanel = array (
 
 	array(	"tab" => "Plugin_Settings",
 			"element" =>
+
+		array(	'type' => 'upsell'),
 
 		array(	"type" => "start-form",
 				"name" => "Plugin_Settings"),
@@ -39,7 +40,7 @@ $optpanel = array (
 								'template-1' => esc_html__( 'Template 1','internal-linking-of-related-contents'),
 								'template-2' => esc_html__( 'Template 2','internal-linking-of-related-contents'),
 								'template-3' => esc_html__( 'Template 3','internal-linking-of-related-contents'),
-								'template-4' => esc_html__( 'Template 4 (PRO)','internal-linking-of-related-contents'),
+								'template-4' => esc_html__( 'Template 4','internal-linking-of-related-contents'),
 								'template-5' => esc_html__( 'Template 5 (PRO)','internal-linking-of-related-contents'),
 								'template-6' => esc_html__( 'Template 6 (PRO)','internal-linking-of-related-contents'),
 								'template-7' => esc_html__( 'Template 7 (PRO)','internal-linking-of-related-contents'),
@@ -54,6 +55,7 @@ $optpanel = array (
 								'template-16' => esc_html__( 'Template 16 (PRO)','internal-linking-of-related-contents'),
 								'template-17' => esc_html__( 'Template 17 (PRO)','internal-linking-of-related-contents'),
 								'template-18' => esc_html__( 'Template 18','internal-linking-of-related-contents'),
+								'template-19' => esc_html__( 'Template 19 (PRO)','internal-linking-of-related-contents'),
 							),
 							'std' => 'template-2'
 						),
@@ -88,6 +90,14 @@ $optpanel = array (
 							'id' => 'ilrc_textcolorhover',
 							'type' => 'color',
 							'std' => '#fff'
+						),
+
+						array(
+							'name' => esc_html__( 'Container text color','internal-linking-of-related-contents'),
+							'desc' => esc_html__( 'Select the text color for template 4.','internal-linking-of-related-contents'),
+							'id' => 'ilrc_containertextcolor',
+							'type' => 'color',
+							'std' => '#616161'
 						),
 
 						array(

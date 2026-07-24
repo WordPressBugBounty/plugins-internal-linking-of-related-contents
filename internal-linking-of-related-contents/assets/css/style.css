@@ -153,6 +153,47 @@
 	background:#e74c3c !important;
 }
 
+/* Template 4
+   ---- */
+
+.internal-linking-related-contents .template-4 {
+	background:#fff;
+	border:solid 1px #ddd;
+	width:100%;
+	padding:0;
+	text-align:left;
+	color:#333;
+	border-radius:5px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+.internal-linking-related-contents .template-4 img {
+	max-height: 170px;
+}
+
+.internal-linking-related-contents .template-4 .postTitle {
+	display:inline-block;
+	vertical-align: middle;
+	max-width: 50%;
+	padding:10px;
+}
+
+.internal-linking-related-contents .template-4 .postTitle ,
+.internal-linking-related-contents .template-4 .postTitle span {
+	color: #616161;
+	-webkit-transition: color .3s ease;
+	-moz-transition: color .3s ease;
+	-o-transition: color .3s ease;
+	transition: color .3s ease;
+}
+
+.internal-linking-related-contents .template-4:hover .postTitle,
+.internal-linking-related-contents .template-4:hover .postTitle span {
+	color:#e74c3c;
+}
+
 /* Template 11
    ---- */
 
@@ -392,4 +433,16 @@
 
 .internal-linking-related-contents .template-18 .template-18-meta span {
 	margin-right: 0;
+}
+
+/* Mobile
+   ---- */
+
+@media screen and (min-width : 0) and (max-width : 600px) {
+
+	.internal-linking-related-contents .template-4 img {
+		max-width: 50% !important;
+		height: auto;
+	}
+
 }
