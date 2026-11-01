@@ -66,6 +66,7 @@ input[type=file]:focus {
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
 
 #ilrc_panel_header a:hover,
@@ -169,6 +170,7 @@ input[type=file]:focus {
 	-webkit-transition: all .3s ease;
 	-moz-transition: all .3s ease;
 	-o-transition: all .3s ease;
+	transition: all .3s ease;
 	font-family: 'Open Sans', Geneva, sans-serif;
 	font-weight:600;
 	float:left;
@@ -176,7 +178,8 @@ input[type=file]:focus {
 	text-shadow:none;
 	margin:0 5px 0 0;
 	border: solid 1px #fafafa;
-	text-transform:uppercase
+	text-transform:uppercase;
+	border-radius: 50px;
 }
 
 #ilrc_panel_tabs li a:hover,
@@ -189,19 +192,21 @@ input[type=file]:focus {
 }
 
 #ilrc_panel_tabs li a:focus {
-	webkit-box-shadow: none;
+	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
-#ilrc_panel_tabs li[value="free_vs_pro"] + li a {
-	background:#f22613;
-	color:#fff;
-	text-shadow:none;
-	border: solid 1px #d91e18;
+
+#ilrc_panel_tabs li#upsell_link a {
+    background: #f22613;
+	color: #fff;
+	line-height: 1;
 }
 
-#ilrc_panel_tabs li[value="free_vs_pro"] + li a:hover {
-	background:#d91e18;
+#ilrc_panel_tabs li#upsell_link a:hover ,
+#ilrc_panel_tabs li#upsell_link a:active ,
+#ilrc_panel_tabs li#upsell_link a:focus {
+  background:#d91e18;
 }
 
 /* ===============================================

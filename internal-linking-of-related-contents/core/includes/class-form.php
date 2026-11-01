@@ -108,7 +108,11 @@ if( !class_exists( 'ilrc_form' ) ) {
 			
 				$html .= '<li';
 				$html .= (str_replace(' ', '', $k) === $current) ? ' class="ui-state-active"' : '' ;
-				$html .= ' value="' . $k . '"';
+				if (0 === strpos($k, 'http')) {
+					$html .= ' id="upsell_link"';
+				} else {
+					$html .= ' id="' . $k . '"';
+				}
 				$html .= '>';
 				
 				if (0 === strpos($k, 'http')) {

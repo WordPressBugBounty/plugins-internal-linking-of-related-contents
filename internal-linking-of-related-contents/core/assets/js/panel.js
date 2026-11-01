@@ -58,6 +58,25 @@ jQuery.noConflict()(function($){
 	$('.ilrc_panel_message').delay(1000).fadeOut(1000);
 
 /* ===============================================
+   DISMISS UPSELL
+   =============================================== */
+
+	$('.ilrc-upsell-dismiss').on('click', function() {
+
+		var $upsell = $(this).closest('.ilrc-upsell');
+
+		$upsell.fadeOut(200);
+
+		$.post(ajaxurl, {
+			action: 'ilrc_dismiss_upsell',
+			nonce: ilrc_pluginData.ajax_nonce
+		}).fail(function() {
+			$upsell.show();
+		});
+
+	});
+
+/* ===============================================
    RESTORE PLUGIN SETTINGS CONFIRM
    =============================================== */
 

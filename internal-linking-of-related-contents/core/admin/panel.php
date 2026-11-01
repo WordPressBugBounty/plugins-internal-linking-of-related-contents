@@ -13,7 +13,9 @@ $optpanel = array (
 
 				"Plugin_Settings" => esc_html__( 'Plugin settings','internal-linking-of-related-contents'),
 				"Import_Export"	=> esc_html__( 'Import/Export','internal-linking-of-related-contents'),
-				"free_vs_pro" => esc_html__( 'Free vs Pro','internal-linking-of-related-contents')
+				"free_vs_pro" => esc_html__( 'Free vs Pro','internal-linking-of-related-contents'),
+				ILRC_SALE_PAGE . 'ilrc-navbar'	=> __( 'Upgrade to Pro','internal-linking-of-related-contents'),
+
 			),
 
 			"start" => "<ul>",
@@ -23,7 +25,6 @@ $optpanel = array (
 	array(	"tab" => "Plugin_Settings",
 			"element" =>
 
-		array(	'type' => 'upsell'),
 
 		array(	"type" => "start-form",
 				"name" => "Plugin_Settings"),
@@ -220,6 +221,8 @@ $optpanel = array (
 						),
 
 			array( "type" => "end-container"),
+
+		array(	'type' => 'upsell'),
 
 		array(	"type" => "end-form"),
 

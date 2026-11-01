@@ -24,6 +24,7 @@ if( !class_exists( 'ilrc_panel' ) ) {
 			add_action('admin_menu', array(&$this, 'admin_menu') ,11);
 			add_action('admin_init', array(&$this, 'add_script') ,11);
 			add_action('admin_init', array(&$this, 'save_option') ,11);
+			add_action('wp_ajax_ilrc_dismiss_upsell', array( &$this, 'ajax_dismiss_upsell' ) );
 
 		}
 
@@ -90,10 +91,27 @@ if( !class_exists( 'ilrc_panel' ) ) {
 				wp_enqueue_script( 'ilrc_panel', $file_dir.'js/panel.js',array('jquery','thickbox', 'wp-color-picker'),'1.0',TRUE );
 
 				wp_localize_script( 'ilrc_panel', 'ilrc_pluginData', array(
-					'path'   => $file_dir )
-				);
+					'path' => $file_dir,
+					'ajax_nonce' => wp_create_nonce( 'ilrc_ajax_action' )
+				) );
 
 			 }
+
+		}
+
+		/**
+		 * Dismiss the upsell panel through AJAX.
+		 */
+
+		public function ajax_dismiss_upsell() {
+
+			if ( ! current_user_can( 'manage_options' ) ) {
+				wp_send_json_error( array( 'message' => __( 'Permission denied.', 'internal-linking-of-related-contents' ) ), 403 );
+			}
+
+			check_ajax_referer( 'ilrc_ajax_action', 'nonce' );
+			update_option( 'ilrc_upsell_dismissed', true );
+			wp_send_json_success();
 
 		}
 
@@ -641,7 +659,13 @@ if( !class_exists( 'ilrc_panel' ) ) {
 
 								case 'upsell':
 
+					if ( get_option( 'ilrc_upsell_dismissed', false ) ) {
+						break;
+					}
+
 									echo $ilrcForm->elementStart('div', FALSE, 'notice ilrc-upsell');
+
+						echo '<button type="button" class="notice-dismiss ilrc-upsell-dismiss" aria-label="' . esc_attr__( 'Dismiss this upsell', 'internal-linking-of-related-contents' ) . '"><span class="screen-reader-text">' . esc_html__( 'Dismiss this upsell', 'internal-linking-of-related-contents' ) . '</span></button>';
 
 										echo $ilrcForm->elementStart('div', FALSE, 'ilrc-upsell-inner');
 

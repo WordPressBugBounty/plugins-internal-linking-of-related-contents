@@ -12,6 +12,16 @@
 	padding: 0;
 }
 
+.ilrc-upsell {
+	position: relative;
+}
+
+.ilrc-upsell .ilrc-upsell-dismiss {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+}
+
 .ilrc-upsell h3 {
 	margin-top:0;
 }

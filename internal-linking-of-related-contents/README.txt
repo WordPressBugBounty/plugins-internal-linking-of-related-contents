@@ -6,7 +6,7 @@ Tags: related posts, inline related posts, similar posts, contextual posts, inte
 Requires at least: 3.5.0
 Tested up to: 7.1
 Requires PHP: 5.6
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -22,6 +22,32 @@ With our plugin, you can insert inline similar posts within your WordPress artic
 
 <strong>Plugin overview</strong><br><br>
 [youtube https://www.youtube.com/watch?v=Pf4ZBjH584M]
+
+**Free features.**
+
+> <strong>Inline related posts</strong><br>
+Automatically insert related posts inside your content, rather than only at the end of the article, to capture readers' attention while they read.<br><br>
+
+> <strong>8 predefined templates</strong><br>
+Choose from 8 different templates for displaying related posts.<br><br>
+
+> <strong>Category or tag matching</strong><br>
+Load related contents based on the post category or on the post tags.<br><br>
+
+> <strong>1 to 3 related posts per article</strong><br>
+Display from 1 to 3 related posts inside each post.<br><br>
+
+> <strong>Paragraph interval</strong><br>
+Set the interval between each related post, from 1 to 6 paragraphs.<br><br>
+
+> <strong>Custom colors</strong><br>
+Customize the colors of the related posts to match your website design.<br><br>
+
+> <strong>Editable call to action</strong><br>
+Edit the call to action text displayed in the related posts.<br><br>
+
+> <strong>Shortcode</strong><br>
+Manually place related posts anywhere in your content using the shortcode.<br><br>
 
 **Premium features.**
 
@@ -137,6 +163,12 @@ Install Internal Linking of Related Contents will add a new admin page, where yo
 19. Template 19 (Premium)
 
 == Changelog ==
+
+= 1.2.8 =
+Release date – October, 06 - 2026
+
+* Added: Option to hide the upsell notice in the plugin settings
+* Improved : Code optimization
 
 = 1.2.7 =
 Release date - August, 30 - 2026
